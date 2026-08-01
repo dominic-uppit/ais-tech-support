@@ -1,0 +1,347 @@
+# Video Map — Nate's YouTube Video Database
+
+Auto-generated from Nate's video database — do not hand-edit; the AIS+ support
+team refreshes it periodically (118 videos as of last refresh).
+
+Use this to point students at Nate's free YouTube videos when one covers their
+problem or build goal. These complement classroom lessons (classroom-map.md) —
+prefer the classroom lesson when both exist; offer the video as a supplement or
+when the topic isn't in the classroom. Link only URLs listed here — never guess
+a YouTube URL.
+
+Resource/template download links are deliberately NOT included (same access-gate
+policy as lesson resources). If a student asks for a video's resources, point
+them at the video itself — Nate covers how to get them there. Never paste or
+reconstruct a resources link.
+
+## Q3 2026
+
+- **I Tested Opus 5 vs. Fable 5. What You Need to Know.** (2026-07-24) — Opus 5 vs Fable 5 head-to-head: real costs, tokens, and time
+  - Watch: https://youtu.be/2J3uX8iRNng
+  - Has resources: yes (not linked — send students to the video)
+- **5 Hacks to Instantly Level Up Your AI OS** (2026-07-23) — 5 organization hacks that keep your AI OS accurate as it grows
+  - Watch: https://youtu.be/Ek1NBfnnTH0
+  - Has resources: yes (not linked — send students to the video)
+- **How I'd Make Money with Claude if my life depended on it** (2026-07-22) — Become the AI person: the 4-step Claude consultant playbook for 2026
+  - Watch: https://youtu.be/vY0EzTP-7EA
+  - Has resources: yes (not linked — send students to the video)
+- **Why Your AI Offer Isn't Selling, and How to Fix That** (2026-07-20) — Sell AI by selling the story, with Nate B. Jones
+  - Watch: https://youtu.be/8MEJen0nblQ
+  - Has resources: yes (not linked — send students to the video)
+- **The $200K AI Job That Didn't Exist Last Year** (2026-07-14) — Build the in-house AI consultant role from inside your current job
+  - Watch: https://youtu.be/eFOTQpbGcy8
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code + Clay Makes Lead Generation Actually Fun** (2026-07-12) — Drive Clay from Claude Code to source, enrich, and write cold-email leads
+  - Watch: https://youtu.be/zyvdl__Ywfk
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code for Non-Coders (6 Hour Course)** (2026-07-11) — Go from total beginner to AI native with Claude Code, no coding needed
+  - Watch: https://youtu.be/jdbOVepEtUE
+  - Has resources: yes (not linked — send students to the video)
+- **How I Make Opus Think Like Fable (5 easy steps)** (2026-07-07) — Make Opus 4.8 think like Fable with a 5-gate skill file
+  - Watch: https://youtu.be/XTBWVVcF3Pk
+  - Has resources: yes (not linked — send students to the video)
+- **How Claude is Creating a New Generation of Millionaires** (2026-07-03) — How non-coders are building million-dollar businesses with Claude Code
+  - Watch: https://youtu.be/pbrln2TVeh4
+  - Has resources: yes (not linked — send students to the video)
+- **How Anthropic Engineers Actually Prompt Fable 5** (2026-07-01) — The 6 prompting habits that get the most out of Fable 5
+  - Watch: https://youtu.be/vcU85OrwuV0
+  - Has resources: yes (not linked — send students to the video)
+## Q2 2026
+
+- **Stanford's Method Turns Claude Into a PHD Level Research Team** (2026-06-29) — Turn Claude into a verified 5-perspective research team (free STORM skill)
+  - Watch: https://youtu.be/Tj3018n5MVg
+  - Has resources: yes (not linked — send students to the video)
+- **I asked Claude Code to make me as much money as possible** (2026-06-25) — 4 Claude Code upgrades that turn it into a money-making partner
+  - Watch: https://youtu.be/iTY8Q449YNQ
+  - Has resources: yes (not linked — send students to the video)
+- **So You Learned Claude, Now What?** (2026-06-22) — Make money with your Claude skills by becoming the AI consultant businesses need
+  - Watch: https://youtu.be/-zL_trhnQaI
+  - Has resources: yes (not linked — send students to the video)
+- **I Battle Tested Sakana Fugu's Fable Killer** (2026-06-22) — Fugu Ultra tied Opus 4.8 on 36/38 tests at 5x the cost
+  - Watch: https://youtu.be/GpSqBjW6hR4
+  - Has resources: yes (not linked — send students to the video)
+- **Finally. Agent Loops Clearly Explained.** (2026-06-19) — What agent loops actually are and how to use them without the 24/7 hype
+  - Watch: https://youtu.be/EuzYhzB0vbI
+  - Has resources: yes (not linked — send students to the video)
+- **1000+ Hours in Claude Code in 60 Mins** (2026-06-18) — Stop vibe coding and direct Claude Code, with Cole Medin
+  - Watch: https://youtu.be/RzLV8sfFdMM
+  - Has resources: yes (not linked — send students to the video)
+- **Every Level of a Claude Second Brain Explained** (2026-06-17) — The 5 levels of a Claude second brain, from file routing to always-on
+  - Watch: https://youtu.be/DTCyvo6cC54
+  - Has resources: yes (not linked — send students to the video)
+- **Learn These 6 AI Skills Now (Before AI Replaces You)** (2026-06-15) — The 6 AI skills that future-proof your career in any role
+  - Watch: https://youtu.be/3XIGcM7VICc
+  - Has resources: yes (not linked — send students to the video)
+- **From Zero to Head of AI in 1 Year (as a regular person)** (2026-06-12) — How a laid-off email developer became Head of AI in 1 year
+  - Watch: https://youtu.be/diY71x7GUjI
+  - Has resources: yes (not linked — send students to the video)
+- **I Turned Claude Fable Into The Ultimate Second Brain** (2026-06-10) — Turn the new Claude Fable model into your entire second brain
+  - Watch: https://youtu.be/8QQ_INxAhRs
+  - Has resources: yes (not linked — send students to the video)
+- **How to Build Claude Subagents Better Than 99% of People** (2026-06-09) — Build Claude Code subagents that keep your context clean and cut costs
+  - Watch: https://youtu.be/e18sdZLwP7o
+  - Has resources: yes (not linked — send students to the video)
+- **The Skill That 10x'd My Claude Code Projects** (2026-06-04) — Use the grill me skill to extract what's in your head into AI context
+  - Watch: https://youtu.be/c0kaKxM2pHg
+  - Has resources: yes (not linked — send students to the video)
+- **I Tested Every Claude Code Feature, These 12 Are the Best** (2026-06-03) — Every Claude Code feature ranked D-to-S, plus the 12 Nate uses daily
+  - Watch: https://youtu.be/vfWTyEreOEc
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code Dynamic Workflows Clearly Explained** (2026-05-30) — Claude Code dynamic workflows explained, and when they're worth the cost
+  - Watch: https://youtu.be/jZgcWCzxh1I
+  - Has resources: yes (not linked — send students to the video)
+- **I Turned Claude Opus 4.8 Into My Entire AI Operating System** (2026-05-29) — Run your entire business from one Claude Code AI operating system
+  - Watch: https://youtu.be/0WDkwMxj13s
+  - Has resources: yes (not linked — send students to the video)
+- **Opus 4.8 Just Dropped. Here's How To Actually Use It.** (2026-05-28) — How to actually use the new Opus 4.8 effort tiers and prompting principles
+  - Watch: https://youtu.be/q5lg3npxjAc
+  - Has resources: yes (not linked — send students to the video)
+- **100 Hours Testing Claude Code vs ChatGPT Codex (honest results)** (2026-05-26) — Compare Claude Code and Codex across features, pricing, and three live builds
+  - Watch: https://youtu.be/RLjaUES9P8A
+  - Has resources: yes (not linked — send students to the video)
+- **The AI Offer You Can Sell Tomorrow Morning** (2026-05-22) — The rung-zero AI consulting offer you can sell tomorrow morning
+  - Watch: https://youtu.be/Pi-m8R068r4
+  - Has resources: yes (not linked — send students to the video)
+- **The One Habit That Doubles Your Claude Code Session Limit** (2026-05-21) — The one prompt-caching habit that doubles your Claude Code session limit
+  - Watch: https://youtu.be/6cEQEba0i2A
+  - Has resources: yes (not linked — send students to the video)
+- **How to Use Your Claude Code Projects in Codex in 5 Mins** (2026-05-18) — Convert any Claude Code project to Codex with one natural-language prompt
+  - Watch: https://youtu.be/kB9iMD0EjT8
+  - Has resources: yes (not linked — send students to the video)
+- **The AI Career Opportunity Nobody is Talking About in 2026** (2026-05-17) — The CAIO wave nobody on AI YouTube is talking about, broken down from IBM data
+  - Watch: https://youtu.be/iIfOprq2kCM
+  - Has resources: yes (not linked — send students to the video)
+- **I Tested 3 Ways to Deploy Claude Agents (Here's When to Use Each)** (2026-05-15) — 3 ways to deploy Claude Code agents and when to use each
+  - Watch: https://youtu.be/xJ5oz63mIec
+  - Has resources: yes (not linked — send students to the video)
+- **Multi-Agent Building In Claude Code Somehow Got Easier** (2026-05-12) — Claude Code's new agent view turns terminal-tab chaos into one tab
+  - Watch: https://youtu.be/ZAaxx3qyT8g
+  - Has resources: yes (not linked — send students to the video)
+- **Every Level of Claude Explained in 21 Minutes** (2026-05-12) — The 5 levels of Claude every user needs to know
+  - Watch: https://youtu.be/ZRb7D6R64hM
+  - Has resources: yes (not linked — send students to the video)
+- **Printing Press Just 10x'd Everyone's Claude Code** (2026-05-09) — Turn any service into an agent-native CLI in 10 minutes with Printing Press
+  - Watch: https://youtu.be/YHk45NEpspE
+  - Has resources: yes (not linked — send students to the video)
+- **Overwhelmed By AI? Just Copy My Tech Stack** (2026-05-08) — Steal Nate's S/A/B/C tier AI tool stack and the mindset that keeps it lean
+  - Watch: https://youtu.be/35WuZxbAY68
+  - Has resources: yes (not linked — send students to the video)
+- **Master 97% of Codex in 1 Hour (full course)** (2026-05-06) — Master 97% of Codex in one hour with a full end-to-end project build
+  - Watch: https://youtu.be/3TdD8Qv5Tk8
+  - Has resources: yes (not linked — send students to the video)
+- **Higgsfield Just Turned Claude Into a Creative Agency** (2026-05-05) — Turn Claude Code into a creative agency with Higgsfield for image and video ads
+  - Watch: https://youtu.be/xn6Z5PYyAIE
+  - Has resources: yes (not linked — send students to the video)
+- **Building Realistic Voice Agents Has Never Been Easier** (2026-05-04) — Build a realistic sales-and-booking voice agent with Claude Code, ElevenLabs, and Cal.com
+  - Watch: https://youtu.be/-cdexJWN8YA
+  - Has resources: yes (not linked — send students to the video)
+- **I Tried 100+ Claude Code Skills. These 6 Are The Best** (2026-05-03) — The 6 Claude Code skills businesses actually pay for
+  - Watch: https://youtu.be/eRS3CmvrOvA
+  - Has resources: yes (not linked — send students to the video)
+- **Build & Sell Claude Code Operating Systems (2+ Hour Course)** (2026-05-01) — Build and sell Claude Code Operating Systems with the Three Ms framework
+  - Watch: https://youtu.be/bCljOfCH8Ms
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Design Masterclass: Websites, Videos & More (2 Hours)** (2026-04-30) — Two-hour masterclass on building a complete brand and launch video in Claude Design
+  - Watch: https://youtu.be/ovabeVoWrA0
+  - Has resources: yes (not linked — send students to the video)
+- **32 Claude Code Hacks in 16 Mins** (2026-04-27) — 32 Claude Code hacks across beginner, intermediate, and advanced tiers
+  - Watch: https://youtu.be/jqoFP9QapXI
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code + Playwright Automates Literally Anything** (2026-04-25) — Automate literally anything on the web with Claude Code and Playwright
+  - Watch: https://youtu.be/J-6pnl5DQg8
+  - Has resources: yes (not linked — send students to the video)
+- **Claude + HyperFrames Just Solved Video Editing** (2026-04-23) — End-to-end AI video editing with Claude Code, Video Use, and HyperFrames
+  - Watch: https://youtu.be/Aw3BkmhYu4I
+  - Has resources: yes (not linked — send students to the video)
+- **I Tested GPT 5.5 vs Opus 4.7: What You Need to Know** (2026-04-23) — Hands-on test of GPT-5.5 vs Opus 4.7 on cost, speed, and token efficiency
+  - Watch: https://youtu.be/WX4rp-vP3zo
+- **OpenAI Image 2 is Nuts. Here are 10 Ways to Use it.** (2026-04-22) — 10 practical ways to use GPT Image 2, OpenAI's new top-ranked image model
+  - Watch: https://youtu.be/GY-kAiZGLOw
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Design Builds Beautiful 3D Websites Instantly (full course)** (2026-04-21) — Full course on building 3D scroll-driven websites in Claude Design
+  - Watch: https://youtu.be/TcFeSjwTo7g
+  - Has resources: yes (not linked — send students to the video)
+- **How to Manage Your Claude Limits Better Than 99% of People** (2026-04-20) — Manage Claude Code session limits better than 99% of people
+  - Watch: https://youtu.be/_qZvORxGqI0
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Just Changed Video Editing Forever** (2026-04-18) — Two natural-language motion-graphic workflows using Claude Design and Hyperframes with Claude Code
+  - Watch: https://youtu.be/ZNbgOhxhzXg
+  - Has resources: yes (not linked — send students to the video)
+- **I Turned Claude Opus 4.7 Into a 24/7 Trader** (2026-04-17) — Autonomous Opus 4.7 trading bot on Claude Code cloud routines placing live Alpaca trades
+  - Watch: https://youtu.be/6MC1XqZSltw
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Design Just Became Unstoppable** (2026-04-17) — Set up Claude Design so every AI output stays on-brand across your team
+  - Watch: https://youtu.be/gAoZ95kqG7w
+- **Claude Opus 4.7 Just Dropped... Or Did It Really?** (2026-04-16) — Breakdown of the Opus 4.7 launch and the 4.6 quality controversy
+  - Watch: https://youtu.be/NiMc2PoTiXo
+- **Claude + HeyGen Just Changed Content Creation Forever** (2026-04-15) — Build a fully automated video production pipeline using Claude Code, HeyGen avatars, and ElevenLabs voice cloning
+  - Watch: https://youtu.be/EbJu9T30nfI
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code Finally Gave Us Scheduled Automations** (2026-04-14) — Set up cloud-based scheduled automations with Claude Code routines
+  - Watch: https://youtu.be/ehg4fhydTgs
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code vs Google Antigravity... Which is Better?** (2026-04-13) — Compare Claude Code and Antigravity after 100 hours of real testing
+  - Watch: https://youtu.be/99VHENEKA9o
+  - Has resources: yes (not linked — send students to the video)
+- **Unlock the Next Evolution of Claude Code with One Plugin** (2026-04-12) — Install and use the Superpowers plugin to level up Claude Code
+  - Watch: https://youtu.be/4XqVR6xI6Kw
+  - Has resources: yes (not linked — send students to the video)
+- **Seedance 2.0 + Claude Code Creates $10k Websites in Minutes** (2026-04-11) — Build stunning websites with Seedance 2.0 looping videos and Claude Code
+  - Watch: https://youtu.be/NvxiSG34mPU
+  - Has resources: yes (not linked — send students to the video)
+- **I Gave OpenClaw $10,000 to Trade Stocks** (2026-04-09) — Giving OpenClaw $10,000 to autonomously trade stocks
+  - Watch: https://youtu.be/eu8UJtuIi-E
+- **Claude Just Told Us to Stop Using Their Best Model** (2026-04-09) — Why Claude says to stop using their best model, and what to use instead
+  - Watch: https://youtu.be/1EPsUXSManU
+  - Has resources: yes (not linked — send students to the video)
+- **I Tested Claude's New Managed Agents... What You Need To Know** (2026-04-08) — Hands-on test of Claude's new Managed Agents feature
+  - Watch: https://youtu.be/27Y44JYXZJ8
+  - Has resources: yes (not linked — send students to the video)
+- **Claude’s New AI Just Changed the Internet Forever** (2026-04-07) — Claude's new AI model and how it changes the internet
+  - Watch: https://youtu.be/DG1wRgEpdO4
+- **Planning In Claude Code Just Got a Huge Upgrade** (2026-04-06) — Major upgrade to planning mode in Claude Code
+  - Watch: https://youtu.be/T4fXb3sbJIo
+- **Andrej Karpathy Just 10x’d Everyone’s Claude Code** (2026-04-05) — How Andrej Karpathy's techniques 10x'd Claude Code for everyone
+  - Watch: https://youtu.be/sboNwYmH3AY
+- **Ollama + Claude Code = 99% CHEAPER** (2026-04-04) — Use Ollama with Claude Code to cut costs by 99%
+  - Watch: https://youtu.be/O2k_qwZA8HU
+  - Has resources: yes (not linked — send students to the video)
+- **18 Claude Code Token Hacks in 18 Minutes** (2026-04-02) — 18 practical hacks to reduce Claude Code token usage
+  - Watch: https://youtu.be/49V-5Ock8LU
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code Source Code Just Leaked… 8 Things You Must Do** (2026-04-01) — 8 things you must do after the Claude Code source code leak
+  - Watch: https://youtu.be/tXtCK66fPj8
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code Just Gave Everyone Virtual Pets (April Fools?)** (2026-04-01) — Claude Code's April Fools virtual pets Easter egg explained
+  - Watch: https://youtu.be/JoPmpwpRrBI
+## Q1 2026
+
+- **Codex Just 10x’d Claude Code Projects** (2026-03-31) — Codex integration makes Claude Code projects 10x more powerful
+  - Watch: https://youtu.be/B2Kh_ZoLVTM
+- **I’ve Built 500 AI Workflows, This is What Businesses Want in 2026** (2026-03-30) — Lessons from 500 AI workflows: what businesses actually want
+  - Watch: https://youtu.be/Y3PcRp5RFzk
+  - Has resources: yes (not linked — send students to the video)
+- **Gemini 3.1 Flash Live Just Changed Voice Agents Forever** (2026-03-28) — Gemini 3.1 Flash Live transforms voice agent development
+  - Watch: https://youtu.be/Qt3zMBH-FNg
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code + Paperclip Just Destroyed OpenClaw** (2026-03-28) — Claude Code + Paperclip destroys OpenClaw in head-to-head test
+  - Watch: https://youtu.be/HJ-dwefABss
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code + iMessage is Finally Here.** (2026-03-26) — Claude Code now integrates with iMessage, full setup guide
+  - Watch: https://youtu.be/hHlpVeooPrI
+- **Claude Code Just Got Another Huge Upgrade** (2026-03-24) — Claude Code's latest major upgrade and what's new
+  - Watch: https://youtu.be/X6EGzi9qm3E
+- **Claude Code Just Dropped Memory 2.0** (2026-03-24) — Claude Code's new Memory 2.0 feature explained in depth
+  - Watch: https://youtu.be/LrgfmZkl3nc
+- **STOP Using Bypass Permissions, Use This New Feature Instead** (2026-03-24) — Better alternative to bypass permissions in Claude Code
+  - Watch: https://youtu.be/pkSxISewcw8
+  - Has resources: yes (not linked — send students to the video)
+- **How to Build Claude Agent Teams Better Than 99% of People** (2026-03-23) — Build Claude Code agent teams better than 99% of people
+  - Watch: https://youtu.be/vDVSGVpB2vc
+- **This $100M AI App Just Changed Software Forever** (2026-03-23) — How a $100M AI app is changing the software landscape forever
+  - Watch: https://youtu.be/T6_Ges4j1qY
+  - Has resources: yes (not linked — send students to the video)
+- **Stop Learning n8n in 2026...Learn THIS Instead** (2026-03-21) — Why you should learn Claude Code instead of n8n in 2026
+  - Watch: https://youtu.be/ZeJXI2MAhj0
+- **Generate Content for 9 Socials on Autopilot with Claude Code** (2026-03-17) — Auto-generate content for 9 social platforms with Claude Code
+  - Watch: https://youtu.be/4Zaoo0YbYaw
+  - Has resources: yes (not linked — send students to the video)
+- **Build & Sell with Claude Code (10+ Hour Course)** (2026-03-12) — Comprehensive 10+ hour course on building and selling with Claude Code
+  - Watch: https://youtu.be/mpALXah_PBg
+  - Has resources: yes (not linked — send students to the video)
+- **I Taught Claude Code to Play Tetris... It Broke the World Record** (2026-03-11) — Claude Code learns to play Tetris and beats the world record
+  - Watch: https://youtu.be/l1jnOXc52NY
+- **Google's New Model + Claude Code Just Changed RAG Forever** (2026-03-11) — Google's new model + Claude Code transforms RAG forever
+  - Watch: https://youtu.be/hem5D1uvy-w
+- **Google’s New Tool Just 10x’d Claude Code** (2026-03-10) — Google's new tool supercharges Claude Code productivity by 10x
+  - Watch: https://youtu.be/Wu67lLD8bB0
+- **How to Build $10,000 Agentic Workflows (Claude Code Tutorial)** (2026-03-08) — Build premium agentic workflows worth $10,000 with Claude Code
+  - Watch: https://youtu.be/vFepZE_wrfg
+- **Claude Code 2.0 Is Finally Here** (2026-03-07) — Everything new in Claude Code 2.0, the biggest update yet
+  - Watch: https://youtu.be/BlNJFa3Btm8
+- **This New Claude Code Feature is a Game Changer** (2026-03-07) — Game-changing new Claude Code feature explained step by step
+  - Watch: https://youtu.be/OUyfxhFtGCo
+- **Cursor Automations Clearly Explained (worth learning?)** (2026-03-06) — Cursor Automations explained clearly, worth learning or not
+  - Watch: https://youtu.be/NDnv16PY2XQ
+- **Turn Claude Code Into Your Executive Assistant in 27 Mins** (2026-03-05) — Set up Claude Code as a full executive assistant in 27 minutes
+  - Watch: https://youtu.be/mi4hcipESKQ
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code Skills Just Got Even Better** (2026-03-05) — Latest improvements to Claude Code's skills system
+  - Watch: https://youtu.be/RAZVk5NPNtE
+- **The NEW Nano Banana 2 + Claude Code = $10k Websites** (2026-03-03) — Build $10k-quality websites with Nano Banana 2 and Claude Code
+  - Watch: https://youtu.be/q0TgUtj6vIs
+  - Has resources: yes (not linked — send students to the video)
+- **Master 95% of Claude Code Skills in 28 Minutes** (2026-02-27) — Master Claude Code skills system in 28 minutes, complete guide
+  - Watch: https://youtu.be/zKBPwDpBfhs
+  - Has resources: yes (not linked — send students to the video)
+- **The NEW Nano Banana 2 + Antigravity Destroys Every AI Image Tool** (2026-02-27) — Nano Banana 2 + Antigravity outperforms every AI image tool
+  - Watch: https://youtu.be/iTKkoGd3YcM
+  - Has resources: yes (not linked — send students to the video)
+- **I Can Actually Watch My AI Agents Work Now** (2026-02-25) — Watch AI agents work in real-time with new observability tools
+  - Watch: https://youtu.be/62Rfe1w9NBc
+- **Claude Code Just Added What Everyone Wanted (Remote Control)** (2026-02-25) — Claude Code's new remote control feature for managing agents
+  - Watch: https://youtu.be/EqhKw0Oro_k
+- **From Zero to Your First Agentic AI Workflow in 26 Minutes (Claude Code)** (2026-02-23) — Build your first agentic AI workflow from scratch in 26 minutes
+  - Watch: https://youtu.be/tDGiWn0flK8
+  - Has resources: yes (not linked — send students to the video)
+- **The EASIEST Way to Host Your Claude Code Agents** (2026-02-20) — Simplest way to host and deploy Claude Code agents online
+  - Watch: https://youtu.be/UGIZnh6HNLc
+  - Has resources: yes (not linked — send students to the video)
+- **Building Beautiful Websites with Claude Code Is Too Easy** (2026-02-19) — Build stunning websites with Claude Code, no design skills needed
+  - Watch: https://youtu.be/86HM0RUWhCk
+  - Has resources: yes (not linked — send students to the video)
+- **How to Sign AI Workflow Clients (With 0 Followers)** (2026-02-16) — How to land AI workflow clients starting with zero followers
+  - Watch: https://youtu.be/_rZAR-s4KIo
+  - Has resources: yes (not linked — send students to the video)
+- **How a College Student Made $500k with Cold Email (Exact Framework)** (2026-02-14) — Exact cold email framework a college student used to make $500k
+  - Watch: https://youtu.be/XB2xmX3USUI
+  - Has resources: yes (not linked — send students to the video)
+- **Turn Any Website Into LLM Ready Data INSTANTLY** (2026-02-11) — Convert any website into clean, LLM-ready data instantly
+  - Watch: https://youtu.be/4efAzBiTeVo
+  - Has resources: yes (not linked — send students to the video)
+- **How I’d Teach a 10 Year Old to Build Agentic Workflows (Claude Code)** (2026-02-07) — Agentic workflows explained simply enough for a 10 year old
+  - Watch: https://youtu.be/3GAxd90fEE4
+  - Has resources: yes (not linked — send students to the video)
+- **How to Sign Your First AI Automation Client in 7 days (With Proof)** (2026-02-04) — Proven framework to sign your first AI client in 7 days
+  - Watch: https://youtu.be/c2C_SbZk6iI
+- **Is n8n Dead?** (2026-02-01) — Honest take on whether n8n is still relevant in 2026
+  - Watch: https://youtu.be/wb4uDdsFh6o
+- **I Turned Clawdbot Into the Ultimate Personal Assistant** (2026-01-30) — Turn Clawdbot into a personal assistant that handles everything
+  - Watch: https://youtu.be/rlJovzVhlIo
+- **100 Hours Testing Clawdbot vs Claude Code (honest results)** (2026-01-28) — Honest comparison after 100 hours testing Clawdbot vs Claude Code
+  - Watch: https://youtu.be/CBNbcbMs_Lc
+  - Has resources: yes (not linked — send students to the video)
+- **Set Up Clawdbot on a VPS in Minutes (no mac mini)** (2026-01-27) — Set up Clawdbot on a VPS without needing a Mac Mini
+  - Watch: https://youtu.be/BhjK2Gr0Ryc
+- **Agentic Workflows Just Changed AI Automation Forever! (Claude Code)** (2026-01-25) — How agentic workflows with Claude Code are changing AI automation
+  - Watch: https://youtu.be/AO5aW01DKHo
+  - Has resources: yes (not linked — send students to the video)
+- **I Will Never Fix Another n8n Workflow (Claude Code)** (2026-01-22) — Let Claude Code auto-detect and fix broken n8n workflows
+  - Watch: https://youtu.be/uUEa6K-FLB8
+  - Has resources: yes (not linked — send students to the video)
+- **Master 95% of Claude Code in 36 Mins (as a beginner)** (2026-01-21) — Complete beginner's guide to Claude Code, setup through advanced usage
+  - Watch: https://youtu.be/saggDHHnmtQ
+  - Has resources: yes (not linked — send students to the video)
+- **I Built an AI System That Automates My Proposals (n8n + Gamma)** (2026-01-19) — AI system that auto-generates client proposals using n8n and Gamma
+  - Watch: https://youtu.be/KGXFkUlBHxw
+  - Has resources: yes (not linked — send students to the video)
+- **How I INSTANTLY Generate Proposal Decks with n8n AI Agents** (2026-01-19) — Instantly generate polished proposal decks with n8n AI agents
+  - Watch: https://youtu.be/-Q_P7HFydZk
+  - Has resources: yes (not linked — send students to the video)
+- **Build ANYTHING with Claude Code & n8n (Beginner's Guide)** (2026-01-16) — Build full apps and automations with Claude Code and n8n
+  - Watch: https://youtu.be/OCO3aq3G0mk
+- **Easiest Way to Migrate n8n Workflows Between Accounts (cloud to self-hosted)** (2026-01-14) — Step-by-step n8n workflow migration between cloud and self-hosted
+  - Watch: https://youtu.be/t1PTmpas0bg
+  - Has resources: yes (not linked — send students to the video)
+- **Claude Code is Better at n8n than I am (Beginner's Guide)** (2026-01-14) — Using Claude Code to build and manage n8n workflows from scratch
+  - Watch: https://youtu.be/B6k_vAjndMo
+  - Has resources: yes (not linked — send students to the video)
+- **I Built a Voice Agent That Calls Every New Lead (n8n + Vapi)** (2026-01-12) — Automated voice agent that calls and qualifies every new lead
+  - Watch: https://youtu.be/BO-jFbN4p8Y
+  - Has resources: yes (not linked — send students to the video)
+- **I Built a New AI System in 3 Hours (and got paid $1650)** (2026-01-07) — Live build of a paid AI system in 3 hours, start to finish
+  - Watch: https://youtu.be/Q4iEslmyMyM
+  - Has resources: yes (not linked — send students to the video)
+- **Once You Know This, Building RAG Agents Becomes Easy in n8n** (2026-01-05) — Core RAG concepts that make building agents in n8n click
+  - Watch: https://youtu.be/kOKavHnlPik
+  - Has resources: yes (not linked — send students to the video)
