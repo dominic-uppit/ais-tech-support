@@ -1,31 +1,31 @@
-# Classroom Map — AIS+ Lesson Reference Lookup
+# Classroom Map: AIS+ Lesson Reference Lookup
 
-Generated from the AIS+ classroom (10 courses, 634 modules). Use this when a student references a lesson by number, title, or partial name, to translate it to the correct course path.
+Generated from the AIS+ classroom (12 courses, 734 modules). Use this when a student references a lesson by number, title, or partial name, to translate it to the correct course path.
 
-Lesson URL pattern: `https://www.skool.com/ai-automation-society-plus/classroom/{course-slug}?md={lesson-id}` — course-slug is the short 8-char code, lesson-id is the full 32-char id. Both are below; never shorten the lesson id.
+Lesson URL pattern: `https://www.skool.com/ai-automation-society-plus/classroom/{course-slug}?md={lesson-id}`. The course-slug is the short 8-char code, the lesson-id is the full 32-char id. Both are below; never shorten the lesson id.
 
-## How to look up a lesson — grep, don't read
+## How to look up a lesson: grep, don't read
 
-**This file is a lookup table, not a document. Do not read it end to end** (634 entries, ~24k tokens). To build one lesson link:
+**This file is a lookup table, not a document. Do not read it end to end** (734 entries). To build one lesson link:
 
 1. **Grep for the lesson title** to get its id:
    `grep -n "WAT Framework" knowledge/classroom-map.md`
-   → `168: - **1.3 The WAT Framework** — lesson-id: \`51acd25ee1d544d0af24b8eee4d7101e\``
-2. **Get the course slug from the table below** — *not* from the grep hit. The `Course slug:` line can sit up to ~210 lines above an entry, so a single grep gives you the id only. Never infer or guess a slug.
-3. Assemble: `https://www.skool.com/ai-automation-society-plus/classroom/{slug}?md={id}` — full 32-char id, unshortened.
+2. **Get the course slug from the table below**, *not* from the grep hit. The `Course slug:` line can sit a long way above an entry, so a single grep gives you the id only. Never infer or guess a slug.
+3. Assemble: `https://www.skool.com/ai-automation-society-plus/classroom/{slug}?md={id}`, full 32-char id, unshortened.
 
-If the grep misses, try a distinctive word from the title rather than the whole phrase (titles carry numbering and emoji, e.g. `**1.4 n8n MCP Server**`, `**AI Voice Agents 🗣️**`). If a title genuinely isn't here, the lesson isn't in the map — say so rather than constructing a link.
+If the grep misses, try a distinctive word from the title rather than the whole phrase (titles carry numbering and emoji, for example `**1.4 Trigger Dev**`). If a title genuinely is not here, the lesson is not in the map: say so rather than constructing a link.
 
-**If the grep returns more than one hit, stop and disambiguate — the ids differ.** Four titles are reused across courses, and picking the wrong row 404s the student or sends them to the wrong course:
+**If the grep returns more than one hit, stop and disambiguate, because the ids differ.** 5 titles are reused across courses, and picking the wrong row 404s the student or sends them to the wrong course:
 
 | Reused title | Appears in |
 |---|---|
-| `Track Your Progress` | START HERE, Build Your Portfolio (×2), Scale, Archived |
+| `🧩 Structured Output Parser Puzzle` | Archived (x2) |
 | `Delivering n8n Projects` | Scale, Community Resources |
+| `Dive Deeper` | 7 Day AIS Challenge (x7) |
 | `Human in the Loop Calendar Agent` | Archived, Community Resources |
-| `🧩 Structured Output Parser Puzzle` | Archived (×2) |
+| `Track Your Progress` | START HERE, Build Your Portfolio (x2), Scale, Archived |
 
-To resolve one, grep with context so you can see which `## ` course section the hit sits under — `grep -n -B 40 "Track Your Progress" knowledge/classroom-map.md | grep -E "^[0-9]+.(## |- \*\*Track)"` — or ask the student which course they're in. Do not pick the first hit by default.
+To resolve one, grep with context so you can see which `## ` course section the hit sits under, or ask the student which course they are in. Do not pick the first hit by default.
 
 | Course (`## ` section) | Course slug |
 |---|---|
@@ -39,6 +39,8 @@ To resolve one, grep with context so you can see which `## ` course section the 
 | Archived | `ec6512da` |
 | Community Resources | `a7f6a1e7` |
 | Live Call Recordings | `f315a988` |
+| 7 Day AIS Challenge | `0a5155f7` |
+| AIS Event Recordings | `bee0cc99` |
 
 ## START HERE
 
@@ -46,14 +48,23 @@ Course slug: `23a170fe`
 
 ### START HERE
 
+- **Step 1: Book Your AIS+ Onboarding Call** — lesson-id: `49b642c3eadd471e9f334c780b214016`
 - **Track Your Progress** — lesson-id: `5e3fc24df27149e1b7cdc783543a4029`
 - **Your Journey from 0 to First Client** — lesson-id: `fcd6622018ee4d7aa67778ec8599463f`
 - **Milestones Along the Way** — lesson-id: `3e801ec70ce74ee9b8cc29fce67cbf54`
 - **Success Stories from Members** — lesson-id: `4c873d74c5a44d71a393f932d775703b`
 - **Help With Billing & Your Account** — lesson-id: `60878a56ab794a23b53c31c45d8d6332`
 - **Getting Help with Automations** — lesson-id: `9e6dcdd305ee4e2d869c0a33027b2b7f`
-- **AIS+ Community Rules** — lesson-id: `6d33ccc0efdd4c9eaa0ac6da9feb87a1`
 - **AIS+ Team** — lesson-id: `b8fd0c465e8c4ce1830afb026cdc82f0`
+
+### START HERE → Membership & Community Policies
+
+- **AIS+ Membership & Community Guide** — lesson-id: `70224004e7e14002a846b883ac6f99a0`
+- **Community Guidelines & Moderation** — lesson-id: `bb4ca1c33f3f439a82eb1c33cd5907a3`
+- **Membership Plans, Upgrades & Access** — lesson-id: `4968381faa6e404c8ee40dd72b549a95`
+- **Cancellations & Refunds** — lesson-id: `6c06fd2961474ce08c34f11d73c1032c`
+- **Member-Led Initiatives & Contribution Recognition** — lesson-id: `bfee9190948748e9a8064acaaee97789`
+- **Rewards, Recognition & Special Access** — lesson-id: `0b536de4d1c740f69f240b69863ec6aa`
 
 ## The AI Partner Model
 
@@ -176,26 +187,23 @@ Course slug: `bd6b51dc`
 - **📍Claude Code** — lesson-id: `442250725ac849c69dc24feecdef5eb8`
 - **🏆END OF CLAUDE CODE🏆** — lesson-id: `86546f13618a4baa8fa317c318fad32d`
 
-### Claude Code → Phase 1: Setup & First n8n Workflow
+### Claude Code → Phase 1: AI Operating System
 
-- **1.1 INTRODUCTION** — lesson-id: `d28605209691441eb9b1ba9e15fa99fa`
-- **1.2 Claude Code Setup** — lesson-id: `55ccd056d2ef4649b6fdaaefdb5bfba1`
-- **1.3 Project + CLAUDE.md** — lesson-id: `1494349dc243478eb68ecb9ff5602845`
-- **1.4 n8n MCP Server** — lesson-id: `ca61d3a0e7294ef5922625da7c12151e`
-- **1.5 n8n Skills** — lesson-id: `68ea1aaaac5541109ed7a9b3db477532`
-- **1.6 Verify All Tools Connected** — lesson-id: `c04b63404036465b936b3527d7613895`
-- **1.7 Demo - The Full Cycle** — lesson-id: `85f249b9eac5492683eb1386a76b0fa0`
-- **1.8 Wrap-Up & Next Steps** — lesson-id: `f731ff71f4e84721a1a6ec437e86f00b`
-- **2.1 Intro & The Vibe Coding Framework** — lesson-id: `1b7a727e3aa24b838ff8a0d6704434c2`
-- **2.2 Masterclass - Starting the Convo** — lesson-id: `960d5fe61ca64178ad45bed11fc92097`
-- **2.3 Masterclass - Building the Workflow** — lesson-id: `a31bef5aeb984061a464bb286565be36`
-- **2.3B OPEN AI Credentials** — lesson-id: `a9cb9656a04746ea9841ed1781c3b3a9`
-- **2.4 Masterclass - Verification & Testing** — lesson-id: `39985ab4be514bde8f94a6b32d6f2b9c`
-- **2.5 Challenge Introduction** — lesson-id: `7ebd15fb51ee474892004c152dc843c8`
-- **3.1 Intro & Enhancement Philosophy** — lesson-id: `ee3199a4d4e5428a82c4ae32226252c9`
-- **3.2 Masterclass - Enhancement Techniques Part 1** — lesson-id: `1b86a2565cda4c68abefa751b91e9d65`
-- **3.3 Masterclass - Enhancement Techniques Part 2** — lesson-id: `f9019fee5d464029b3d1bdadd47f0de5`
-- **3.4 Challenge Introduction** — lesson-id: `4e94373a212540f2b8030e56afdfb988`
+- **1. Introduction** — lesson-id: `218d11d02b3c44bfa27b0cfdfa3814cb`
+- **2. Mindset** — lesson-id: `8da6eb31ab4b4e9580a476895cbfe7bb`
+- **3. Installing Claude Code** — lesson-id: `3ce08b5398034e1c95e20f61dfb20a90`
+- **4. Prompting** — lesson-id: `d3e8a1cebfb04f148cf85e2c927b8691`
+- **5. Tokens + Models** — lesson-id: `7793b6794fde4e32a8785e98010fd5e6`
+- **6. CLAUDE.md and the .claude Folder** — lesson-id: `1401b0c2b1e64badb8d7006afc513465`
+- **7. Context** — lesson-id: `e1ac10104557483fad1f68116d890b71`
+- **8. Connections** — lesson-id: `74480f8d35ea4d3c83e6d33579cf60b9`
+- **9. APIs and .env** — lesson-id: `22b8eb9948fa4428b5ee4eb7f4bb23ed`
+- **10. Capabilities** — lesson-id: `bb907fc9416e451a8deda2d0333e96c6`
+- **11. Skills** — lesson-id: `c11100cb5cc145ceb69550f30d980383`
+- **12. Subagents** — lesson-id: `87452b14145d47819f66c8c46e806d58`
+- **13. Cadence** — lesson-id: `77aa132814bf474ea9695ae7be00595b`
+- **14. Routines + Deploying** — lesson-id: `800b2d63b6ae42efa122751f5414a8ba`
+- **15. Token Management** — lesson-id: `1e76d6c6c17b440b98259840b6428acf`
 
 ### Claude Code → Phase 2: Mastering Claude Code
 
@@ -412,10 +420,10 @@ Course slug: `308fec3a`
 
 ### Member Perks → Lifetime Membership - Level 9
 
-<!-- ⚠️ NAMING POLICY: the numbered lesson titles below are member-spotlight names (non-team community members).
+<!-- NAMING POLICY: the numbered lesson titles below are member-spotlight names (non-team community members).
      They are recorded here only so lesson ids resolve. NEVER repeat these names to a student, and never cite them
-     as a source or a person to contact — refer to the section as "the Level 9 lifetime-membership spotlights".
-     See SKILL.md → naming policy. -->
+     as a source or a person to contact. Refer to the section as "the member spotlights".
+     See SKILL.md, naming policy. -->
 
 - **Unlock FREE Access to the Community For Life** — lesson-id: `54ebd6290e5f4c5ca272a4d1d0f07014`
 - **1) Usman Mohammed** — lesson-id: `0da9dd9ab03e41afa7b0c2bd294fe420`
@@ -635,6 +643,7 @@ Course slug: `a7f6a1e7`
 
 - **Nate Herk - Video Database** — lesson-id: `275b65da2ad945948a74f7a9ae951adf`
 - **Community Shared Skills** — lesson-id: `d6875ebd69184ad482e58e1e1cdd4181`
+- **Build Your AI OS** — lesson-id: `3d36142e499142ea95432fbb166a5471`
 - **AIS+ REFUND POLICY** — lesson-id: `cb2a16d8bed643c5816a1bf0443b4240`
 - **How to Upgrade or Cancel Membership** — lesson-id: `c8981e84e00a4eb087e4f6cd702f71dd`
 
@@ -652,7 +661,15 @@ Course slug: `a7f6a1e7`
 - **Earn $ With GEMS💎** — lesson-id: `8b7ed205b38b4a12895b72272ee6d5bf`
 - **Business Gems** — lesson-id: `829495d708024ab99f9b1c48dc47e49d`
 - **Thoughtful Gems** — lesson-id: `290eacc6c0f440c4b44ea3a4f13a752c`
-- **Techy Gems** — lesson-id: `457964518cc04fb693b1bf74ddc9d9be`
+- **Techy Gems** — lesson-id: `74c82d7888fc4823a9bac5d624feaacb`
+- **Sep 18, 2026** — lesson-id: `27fae9359657428cb5122c0ac1f264ad`
+- **Aug 24, 2026** — lesson-id: `7bce4f5c2c514b6dbd547c54a9f95076`
+- **Aug 10, 2026** — lesson-id: `c4f0cb65c3e04299a5c6f048a90cce5c`
+- **Aug 1, 2026** — lesson-id: `ad42978348ab4ef1aba15c2a4b5c5355`
+- **29 June, 2026** — lesson-id: `cb38cb80877443abb66f0af409f05bd0`
+- **June 15, 2026** — lesson-id: `15e77af408154387b4a050b8bcf7adbb`
+- **June 10, 2026** — lesson-id: `3dbb3249b1944129b551f74ea59c20eb`
+- **Apr 14, 2026** — lesson-id: `2cd76dab28cc40fe8a267589940eac73`
 
 ### Community Resources → Wins 🌟
 
@@ -686,10 +703,6 @@ Course slug: `a7f6a1e7`
 
 - **Jose M Lopes** — lesson-id: `5dbaa6bbf5174bceabd90839c34a574e`
 
-### Community Resources → Monthly Resources (Tech Team)
-
-- **April 2026** — lesson-id: `f21597a7ec9c4d03b7d0e867b2896d67`
-
 ### Community Resources → Community Builds
 
 - **Procurement Automation** — lesson-id: `88a3a20b3ae04ae994d190dfed8a6f47`
@@ -704,7 +717,6 @@ Course slug: `a7f6a1e7`
 
 - **Welcome!** — lesson-id: `74cdff2b76f949188b12ba61f11ba72f`
 - **Airtop** — lesson-id: `8d5103e1808d480b981346ee30102a7a`
-- **Apify** — lesson-id: `1095dbc2972a49a78c8efb4e7ee817f5`
 - **Blotato** — lesson-id: `77223072421a4800896dd29a30e464a2`
 - **Firecrawl** — lesson-id: `39d1c2373aa5472dabb38e62818fac46`
 - **Hostinger VPS** — lesson-id: `99571a6a851d4f6ab51bb970c8a506e9`
@@ -723,13 +735,15 @@ Course slug: `a7f6a1e7`
 
 ### Community Resources → Useful Resources
 
-- **Agentic Design Patterns - Guide by Google CTO** — lesson-id: `6f90186c7a8441bb8c63ced1355630a6`
-- **RAG Explained: Reranking for Better Answers** — lesson-id: `a19cb1128e7041f68a70a8a998c86aec`
-- **Claude Code Quick Reference Guide** — lesson-id: `2cf5778e8c1742d69e81546357296a18`
-- **Beginner's Guide to MCP** — lesson-id: `c75d5e1a414e449fb8c2a3bc44be845b`
-- **Switch to a Mac from PC - The Easy Way !** — lesson-id: `c5f2191669b44ac8b02f6e060ff19200`
-- **Claude Code Project Starter kit** — lesson-id: `c5ca4c7fadfc4ba3b27430b06d178be7`
+- **AI Automation, AIOS, and Client Delivery** — lesson-id: `a35376d3edd94f5dba934934a881c029`
 - **Claude Cowork Explained** — lesson-id: `e616f6d92cf243c89801fd1a8c691978`
+- **Claude Code Project Starter kit** — lesson-id: `c5ca4c7fadfc4ba3b27430b06d178be7`
+- **Switch to a Mac from PC - The Easy Way !** — lesson-id: `c5f2191669b44ac8b02f6e060ff19200`
+- **Beginner's Guide to MCP** — lesson-id: `c75d5e1a414e449fb8c2a3bc44be845b`
+- **Claude Code Quick Reference Guide** — lesson-id: `2cf5778e8c1742d69e81546357296a18`
+- **Agentic Design Patterns - Guide by Google CTO** — lesson-id: `6f90186c7a8441bb8c63ced1355630a6`
+- **MCP Resources for Beginners** — lesson-id: `f7f597079c5f4a65b89035344a0f71cf`
+- **RAG Explained: Reranking for Better Answers** — lesson-id: `a19cb1128e7041f68a70a8a998c86aec`
 
 ### Community Resources → n8n Templates
 
@@ -877,6 +891,19 @@ Course slug: `f315a988`
 
 ### Live Call Recordings → 💬 Q&As
 
+- **💬Azure AI & Outreach** — lesson-id: `014cbc5c3d88468493f9d0bee3026dc9`
+- **💬AI Avatars & Client Growth** — lesson-id: `55a4dd80c8864b588ac406a177e1466f`
+- **💬Evals and Governance** — lesson-id: `aed3908440574a69865af9e1556cc768`
+- **💬Free Client Projects** — lesson-id: `c9a770ddb66c4c63ae5f3e6f83eccf1f`
+- **💬Leverage Your Existing Experience** — lesson-id: `d1f0893c944741189ba8a11c8f9f53e3`
+- **💬 Portfolio Building** — lesson-id: `b4c7ae2f8af3462d8b6450f0e88cfe8a`
+- **💬 Workless AI Event** — lesson-id: `fd4c38a8f84646ebbb22b1f0de92e5bc`
+- **💬AI OS Knowledge Management** — lesson-id: `11b23fdfc73c4091a9275e9493b6e155`
+- **💬Build vs. Buy** — lesson-id: `9ebaa70b7d1a40dc85dbac0270f2c7ca`
+- **💬 "AI Consulting"** — lesson-id: `ae70f92a9d9c4b40b22c30dec6d5d590`
+- **💬Providing AI Services** — lesson-id: `f124c79272ad4c1e8aad685958caa16e`
+- **💬Solo Agency Growth** — lesson-id: `1299c0b4deb841b3841d0f409c6fc95f`
+- **💬Imposter Syndrome** — lesson-id: `7a0f60eb80794dd1b6403b1788e279ea`
 - **💬AI OS Architecture?** — lesson-id: `9ff7a9acfb3844f487d4991bdeb17b25`
 - **💬Shared Company Data** — lesson-id: `eaa56804b42247c393fcdf81caf42d7c`
 - **💬Contracts and SOW** — lesson-id: `fe941a3f5d4243459f2447306c658d37`
@@ -938,11 +965,121 @@ Course slug: `f315a988`
 - **💬 Crawl4AI & AI's Impact on Employment** — lesson-id: `178a235f46b04c99accddb1c4ca5ee7b`
 - **💬 Current State of AI Automation** — lesson-id: `c90dd644cc9543ca91655f3ddfa2f7c8`
 - **💬 Project Scoping & Security and Data Privacy** — lesson-id: `18668ba0fe384930a6e09a1355b4605a`
-- **💬 Financial Analysis Workflow** — lesson-id: `e7d57130a64540dbad404965f4e0689e`
-- **💬 AI Content Creation** — lesson-id: `bf984f7407674787a50fb6bd66bf2dc8`
 
 ### Live Call Recordings → Chill, Chat & Chaos - Call Recaps
 
-- **Recap (Nov 30, 2025)** — lesson-id: `8e399a810b604328a4799b3e3cc1c132`
-- **Recap (Sep 20, 2025)** — lesson-id: `68530aee75114e2aa9595a77b7d51b83`
-- **Recap (Nov 16, 2025)** — lesson-id: `a7c1ff0300b84f6bbbbaddef62fd8316`
+- **CCC Recap (June 13, 2026)** — lesson-id: `aa8898c2ca3f433f9080f4e715116454`
+- **CCC Recap (June 6, 2026)** — lesson-id: `fde3a324cb444e9d848528ff546b7647`
+- **CCC Recap (May 30, 2026)** — lesson-id: `9ff5ef25aee643af87c38255c549efb0`
+- **CCC Recap (May 23, 2026)** — lesson-id: `55ca801054b64bb3a4ffc28f3ca14316`
+- **CCC Recap (May 16, 2026)** — lesson-id: `8267b06829ea44ebb706c6e1b4e89544`
+- **CCC Recap (May 9, 2026)** — lesson-id: `8b7bb11e9f6d4295b99010aaf2384da8`
+- **CCC Recap (May 2, 2026)** — lesson-id: `c347f870dc3946d4bf21962fae48ec4f`
+- **CCC Recap (Apr 25, 2026)** — lesson-id: `4a0e084aed60491681596905ed1a4f47`
+- **CCC Recap (Apr 18, 2026)** — lesson-id: `327d3a644aa2447b85513086931f79b1`
+- **CCC Recap (Apr 11, 2026)** — lesson-id: `c4693bd241e347eda2f4c709063b228e`
+- **CCC Recap (Apr 4, 2026)** — lesson-id: `765b942bd8b84790a17fb54b28485d12`
+- **CCC Recap (Mar 28, 2026)** — lesson-id: `cc4d99457ceb4db8a6d1e5dafa9d3e31`
+- **CCC Recap (Mar 21, 2026)** — lesson-id: `13dac8d7aa9147a3813482973ececd0f`
+- **CCC Recap (Mar 14, 2026)** — lesson-id: `e080317e8bf74d5bbf902c56fc210b07`
+- **CCC Recap (Mar 7, 2026)** — lesson-id: `a332033de3004c0799f4dcd35dbc883e`
+- **CCC Recap (Feb 28, 2026)** — lesson-id: `3ba5cb70e2884f19b6df6643cec82496`
+- **CCC Recap (Feb 21, 2026)** — lesson-id: `eb6fcbfdab1442db864fc82d493a5264`
+- **CCC Recap (Feb 7, 2026)** — lesson-id: `4b75fb4f78a1427a8d102f9d8924e759`
+- **CCC Recap (Jan 31, 2026)** — lesson-id: `8362e51cfd0a4c258c1348834e23435d`
+- **CCC Recap (Jan 24, 2026)** — lesson-id: `f0263103fb6644dab297f4a8cb3e5e88`
+- **CCC Recap (Jan 10, 2026)** — lesson-id: `94d272d930fc49e7917dfd99d4c02234`
+- **CCC Recap (Dec 13, 2025)** — lesson-id: `966bdcd4d5204c8eb55387a0cd8d9094`
+- **CCC Recap (Nov 30, 2025)** — lesson-id: `8e399a810b604328a4799b3e3cc1c132`
+- **CCC Recap (Nov 16, 2025)** — lesson-id: `a7c1ff0300b84f6bbbbaddef62fd8316`
+- **CCC Recap (Oct 19, 2025)** — lesson-id: `cf5662b7012f4eefaf965281e9969ef8`
+- **CCC Recap (Oct 5, 2025)** — lesson-id: `af72e329547b4802b27afde51822611c`
+- **CCC Recap (Sep 21, 2025)** — lesson-id: `68530aee75114e2aa9595a77b7d51b83`
+- **CCC Recap (Sep 6, 2025)** — lesson-id: `6a117784ba2248959793567fcaf5b4fe`
+- **CCC Recap (Aug 28, 2025)** — lesson-id: `ff865d90a9bd4f5e9543eb3c2684366c`
+- **Chill, Chat & Chaos Call Archive** — lesson-id: `93c9abde753146348e029e3db237f635`
+
+## 7 Day AIS Challenge
+
+Course slug: `0a5155f7`
+
+### 7 Day AIS Challenge → Start Here
+
+- **Challenge Rules & How It Works** — lesson-id: `26019d87aa2643938271c7411042c838`
+- **Download Your Progress Tracker** — lesson-id: `a2e82b8abd2042519c53bb5c5dd24c43`
+- **Meet the Builders Community** — lesson-id: `a5b69a082f7b43a1914f303195bd71b1`
+- **Prerequisites & Setup** — lesson-id: `be4dc2a2d3774c83ac05e04056866ad3`
+
+### 7 Day AIS Challenge → Day 1: First Workflow
+
+- **Watch: Agentic AI** — lesson-id: `8cc7aa224967418381d9ecbedc01de1d`
+- **Lesson: The WAT Framework** — lesson-id: `58f3bbeb596545ec9c51c365c77572cf`
+- **Build: Newsletter Automation** — lesson-id: `6a0723921bce45569a6ae883bb952252`
+- **Dive Deeper** — lesson-id: `9f8c515ff92b4f32a36e438bd9045cae`
+- **Day 1 Knowledge Check** — lesson-id: `1d3ab8db293e4592a24c754e6c2a8fed`
+- **Share Your Day 1 Build** — lesson-id: `e2b44739afe946949a3ba05e9ce608f1`
+
+### 7 Day AIS Challenge → Day 2: Using an MCP Server
+
+- **Watch: Using an MCP Server** — lesson-id: `63d4eb7076084d57bfaf1dfded11ca80`
+- **Lesson: What are MCP Servers?** — lesson-id: `c935266c7ed04818b83b1e4483ca7b5d`
+- **Build: Set Up Firecrawl MCP & Scrape a Site** — lesson-id: `dbd31c8b94e14eb3be2cb49e5952d181`
+- **Dive Deeper** — lesson-id: `96d5cf3d8afa4e61b840562d636a1144`
+- **Day 2 Knowledge Check** — lesson-id: `7c31d199f27847ae85c26f9acfefe3cd`
+- **Share Your Day 2 Build** — lesson-id: `12ba217cc1474d2aa905170365fb0633`
+
+### 7 Day AIS Challenge → Day 3: Learning Skills
+
+- **Watch: Learning Skills** — lesson-id: `01588c4441994e0c9e46672a2784737c`
+- **Learn: Skill Anatomy & Progressive Loading** — lesson-id: `6b61f2f09e754e32ab667d03d4150c80`
+- **Build: Install Skill Builder & Create First Skill** — lesson-id: `00efb90df0454e438c2a3521bc3db210`
+- **Dive Deeper** — lesson-id: `3a3727682276474f9a8be60206485977`
+- **Day 3 Knowledge Check** — lesson-id: `16b43400428948da87b3edcce2853bce`
+- **Share Your Day 3 Skills** — lesson-id: `7e028a40cf3f4032bc049636bb837abb`
+
+### 7 Day AIS Challenge → Day 4: Deploying an Automation
+
+- **Watch: Deploying an Automation** — lesson-id: `324437a5e4cb4bba812fa3424e2315d3`
+- **Learn: The Deployment Pipeline** — lesson-id: `df1eb617b0bd49cb8bbc67cfd3b9d7d3`
+- **Build: Build/Deploy an Automation to Trigger.dev** — lesson-id: `e3e1d3f865b54ffab1654ec2cd2dd461`
+- **Dive Deeper** — lesson-id: `f8e0bc11407e42ae8c57d73283a95fe4`
+- **Day 4 Knowledge Check** — lesson-id: `37eafca3c52742299c75441c575388ed`
+- **Share Your Deployed Automation** — lesson-id: `0f7b72daeb54490e8602f850c9e8b5b7`
+
+### 7 Day AIS Challenge → Day 5: Website Building
+
+- **Watch: Website Build — 5 Hacks** — lesson-id: `124fa7e758cb4311baad5e0a950127bd`
+- **Learn: Front-End Skill & Screenshot Loop** — lesson-id: `355b15d48408434aa90f72f58abca821`
+- **Build: Build a Professional Landing Page** — lesson-id: `9d703fb780af4b7d8a1d864793003b25`
+- **Dive Deeper** — lesson-id: `d3d219ffa27e492bbf2773fe60ef9e21`
+- **Day 5 Knowledge Check** — lesson-id: `f28ae39226034792bcc33f53fb619f04`
+- **Share Your Website** — lesson-id: `11acddb7a98148538cf57db3cbd0be8a`
+
+### 7 Day AIS Challenge → Day 6: Scheduled Automations and Loop
+
+- **Watch: Scheduled Tasks in Claude Code** — lesson-id: `6d7c22470d57414ba9853d2882fbcf6a`
+- **Watch: Loop — Recurring Tasks Within a Session** — lesson-id: `d34486e9a3094b7fb655a625ad549ee0`
+- **Learn: Scheduled Tasks vs Loops** — lesson-id: `4ff95bb052924fb983fe6b3ada373b3d`
+- **Build: Create a Scheduled Task and a Loop** — lesson-id: `37754654138e4add981cfd5fb46ba641`
+- **Build Build a Self-Improving Scheduled Automation** — lesson-id: `1a8b28bfb6a240ed98eae4501f008025`
+- **Dive Deeper** — lesson-id: `bca6eabf02db42b38ce695e51e7fa125`
+- **Day 6 Knowledge Check** — lesson-id: `c097cd7c44b4418ca26e61b4d6096536`
+- **Share Your Scheduled Automation** — lesson-id: `7efd130eaaf24a429d258e4a89f83d54`
+
+### 7 Day AIS Challenge → Day 7: Executive Assistant
+
+- **Watch: Building an Executive Assistant** — lesson-id: `c9d2e18f4a844549aa8ed3a70281a0f7`
+- **Learn: 4-Phase Framework** — lesson-id: `c03f25e5d4a140a2ac5e16d3bcab2023`
+- **Build: Build Your Executive Assistant** — lesson-id: `0dc37da3e75241e78ccaab23582b2d7f`
+- **Dive Deeper** — lesson-id: `21bbe12f093a4632a711ed347f4cb754`
+- **Day 7 Knowledge Check** — lesson-id: `e48d6b92c7f54c089255916b97bfc4c2`
+- **Submit Your Capstone** — lesson-id: `e43f80962d4d46d89ba72a2b7d2af47b`
+- **What’s Next: Your Path Forward** — lesson-id: `bcf401bd228940d19ba7a4d74d2f9d5d`
+
+## AIS Event Recordings
+
+Course slug: `bee0cc99`
+
+### AIS Event Recordings
+
+- **AIS Live - July 11 & 12, 2026** — lesson-id: `4eb55f790b95457e8e701e3b6bbd742c`

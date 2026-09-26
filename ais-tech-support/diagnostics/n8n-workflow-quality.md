@@ -312,7 +312,7 @@ Dragging a node moves it back; manual edits revert; Claude claims it fixed thing
 ### 9b — Claude Code suddenly inventing n8n nodes
 
 Workflows that built fine last week now contain made-up nodes, often right after a new model release.
-1. **Confirm the n8n skills repo is not just cloned but actually REFERENCED in your CLAUDE.md.** Reviewing the CLAUDE.md was the step the student had missed, and fixing it resolved her case. (The skills repo is taught in lesson `1.5 n8n Skills`.)
+1. **Confirm the n8n skills repo is not just cloned but actually REFERENCED in your CLAUDE.md.** Reviewing the CLAUDE.md was the step the student had missed, and fixing it resolved her case. (The skills repo is czlonkowski/n8n-skills; install steps are in `knowledge/fix-patterns-config-skills.md`, "Where to drop community skills". No current classroom lesson covers it.)
 2. **Connect the n8n MCP** so Claude reads real node schemas instead of guessing. Without it, invented nodes are expected behaviour.
 3. If it started right after a new Opus release, try **Sonnet** for n8n workflow building and make sure the CLI itself is up to date — the CLI sometimes lags a model release.
 4. Use `/clear` between unrelated tasks, and at most one deliberate `/compact` mid-task; the student credited this session hygiene as part of what fixed her sessions.

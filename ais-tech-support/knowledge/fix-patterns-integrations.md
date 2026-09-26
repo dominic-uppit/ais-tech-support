@@ -69,7 +69,7 @@ See also `diagnostics/third-party-integrations.md`, which is the routed entry po
 4. Secrets pattern to carry forward: environment variables locally, secrets stored in the deployment platform's own dashboard, nothing committed to GitHub - the pattern taught in Phase 3 lesson 1.5 Secrets Management.
 5. For client work: one Google Cloud project with its own OAuth credentials per client, never shared across clients.
 
-**Lesson reference**: Lesson 1.5 Secrets Management covers the pattern — verify lesson number
+**Lesson reference**: `Claude Code → Phase 3: Hosting & Deployment → 1.5 Secrets Management` covers the pattern (Phase 2 also has a lesson 1.5, on MCP servers, so give the phase)
 
 **Confidence**: medium — team-verified, lesson-backed
 

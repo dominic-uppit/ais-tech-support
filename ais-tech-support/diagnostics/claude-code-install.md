@@ -1,6 +1,6 @@
 # Diagnostic — Claude Code Install & PATH
 
-Use this when a student can't get the `claude` CLI to run: `command not found`, `permission denied`, PATH errors, install fails, "I have the VS Code extension but `claude` doesn't work in terminal", or "I have no admin rights on this machine". Covers everything in taxonomy section 1 EXCEPT lesson 1.4 / n8n-mcp specifics (those live in `diagnostics/lesson-1-4-n8n-mcp.md`).
+Use this when a student can't get the `claude` CLI to run: `command not found`, `permission denied`, PATH errors, install fails, "I have the VS Code extension but `claude` doesn't work in terminal", or "I have no admin rights on this machine". Covers everything in taxonomy section 1 EXCEPT connecting n8n to Claude Code with the n8n MCP server (that lives in `diagnostics/lesson-1-4-n8n-mcp.md`).
 
 **Key thing to know going in**: many students install the VS Code Claude Code extension and assume `claude` is also installed in their terminal. **The extension and the CLI are separate things.** The extension actually depends on the CLI underneath. If `claude --version` doesn't return a version in a normal terminal, the CLI itself needs installing — even if the extension is sitting there in VS Code.
 
@@ -216,7 +216,7 @@ If the student is clearly new (e.g., "I've never used terminal before", "what's 
   - **VS Code** (if course uses it): direct download from code.visualstudio.com.
   - **A GitHub account** (only needed if they want cross-machine sync — see corpus pattern). They can install Claude Code without one.
 
-**Don't make them install everything up front.** Install just what they need for the current lesson. Many students get overwhelmed by a pre-flight list they don't yet understand.
+**Don't make them install everything up front.** Install just what they need for the current lesson. Many students get overwhelmed by an up-front list of tools they don't yet understand.
 
 <!-- pattern: /installing-claude-with-no-github-account, /im-lost-help -->
 
@@ -237,7 +237,7 @@ If `claude --version` works but `claude` (interactive) errors:
 - Account/auth issue, not install. Run `/login` from within Claude Code, or check `/status`.
 
 If all of the above work → install is good. Now they can:
-- Move on to lesson 1.4 / n8n MCP setup → `diagnostics/lesson-1-4-n8n-mcp.md`.
+- Connect n8n to Claude Code with the n8n MCP server, if that is their goal: `diagnostics/lesson-1-4-n8n-mcp.md`.
 - Or work on whatever they were originally trying to do.
 
 ---

@@ -49,10 +49,10 @@ Key for `verified`:
   - https://www.skool.com/ai-automation-society-plus/installing-claude-with-no-github-account
   - https://www.skool.com/ai-automation-society-plus/im-lost-help
 
-### 1.6 Lesson 1.4 setup confusion / "the video doesn't match what I see"
-- Symptom: "I followed the video and got 100x more files", "the menu doesn't show n8n API option"
+### 1.6 n8n MCP setup confusion / "the video doesn't match what I see"
+- Symptom: "I followed the video and got 100x more files", "the menu doesn't show n8n API option". Almost all of these threads came from the old Claude Code lesson 1.4 (n8n MCP Server), which is removed from the classroom on 2026-09-30; no surviving lesson covers this setup. Fix steps: `diagnostics/lesson-1-4-n8n-mcp.md`
 - Count: ~16 (biggest single setup pain point in the corpus) <!-- count refreshed 2026-07 -->
-- Verified: yes (combination: install Node, install Homebrew on Mac, use the pre-flight checklist, n8n needs paid Cloud or self-host to expose API)
+- Verified: yes (combination: install Node, install Homebrew on Mac, n8n needs paid Cloud or self-host to expose API)
 - Examples:
   - https://www.skool.com/ai-automation-society-plus/help-with-section-14-n8n-mcp-server
   - https://www.skool.com/ai-automation-society-plus/section-14-in-the-claude-code-set-up
@@ -203,7 +203,7 @@ Key for `verified`:
   - https://www.skool.com/ai-automation-society-plus/cant-find-claude-md-for-wat-framework
 
 ### 4.3 What are skills, when do you need them, are they safe?
-- Symptom: "Course says install n8n skills but I'm not sure what they do"
+- Symptom: "Course says install n8n skills but I'm not sure what they do" (that was the old Claude Code lesson 1.5, removed from the classroom on 2026-09-30; no surviving lesson installs the n8n skills, so answer from the fix patterns)
 - Count: ~10 <!-- count refreshed 2026-07 -->
 - Verified: yes — use czlonkowski's n8n-skills (trusted source), skills don't replace CLAUDE.md
 - Examples:

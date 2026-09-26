@@ -46,7 +46,7 @@ Provenance labels used below: **lesson-backed** (matches classroom content), **t
 ---
 
 ## Where to drop community skills
-**Symptom**: "Course tells me to install n8n-skills, where do they go?"
+**Symptom**: "I want to install n8n-skills (or another community skill), where do they go?"
 
 **Root cause**: Documentation gap.
 

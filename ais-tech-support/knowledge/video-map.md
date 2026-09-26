@@ -1,7 +1,7 @@
 # Video Map — Nate's YouTube Video Database
 
 Auto-generated from Nate's video database — do not hand-edit; the AIS+ support
-team refreshes it periodically (118 videos as of last refresh).
+team refreshes it periodically (135 videos as of last refresh).
 
 Use this to point students at Nate's free YouTube videos when one covers their
 problem or build goal. These complement classroom lessons (classroom-map.md) —
@@ -16,6 +16,57 @@ reconstruct a resources link.
 
 ## Q3 2026
 
+- **GPT-6 Astra Finally Solves AI Video Editing (full guide)** (2026-09-08) — Edit videos with Codex, HyperFrames, synced captions, and motion graphics
+  - Watch: https://youtu.be/o3IEkKXXXvo
+  - Has resources: yes (not linked — send students to the video)
+- **I Turned GPT-6 Astra Into the Ultimate AI Second Brain** (2026-09-07) — Build an AI operating system second brain with Codex, Astra, and the four Cs
+  - Watch: https://youtu.be/yysILVsfLFM
+  - Has resources: yes (not linked — send students to the video)
+- **I Turned GPT-6 Astra Into a 24/7 Stock Trader (tutorial)** (2026-09-07) — Build a 24/7 AI trading research workflow with Codex, Astra, and Alpaca
+  - Watch: https://youtu.be/TLQLfa7yH4I
+  - Has resources: yes (not linked — send students to the video)
+- **GPT-6 Astra FINALLY Kills AI Website Slop** (2026-09-04) — Build premium sites and videos with Astra, Scrollcraft, and strong references
+  - Watch: https://youtu.be/QhmhUgccaS0
+  - Has resources: yes (not linked — send students to the video)
+- **Fable 5.1 FINALLY Kills AI Website Slop** (2026-09-02) — Beat AI website slop with design references, layering, and Fable 5.1
+  - Watch: https://youtu.be/FFWtxjvW2ts
+  - Has resources: yes (not linked — send students to the video)
+- **I Analyzed How Anthropic ACTUALLY Prompts Fable 5.1** (2026-09-02) — Stretch Fable 5.1 usage limits with four prompting tricks from Anthropic's docs
+  - Watch: https://youtu.be/FBVNS1l5Vb8
+  - Has resources: yes (not linked — send students to the video)
+- **Build & Sell Grok Bots (2 Hour Course)** (2026-08-31) — Build and sell Grok Bot agent teams with the Four Cs framework
+  - Watch: https://youtu.be/4hKJ9X6rGFo
+  - Has resources: yes (not linked — send students to the video)
+- **I Cloned Calendly and Now It’s Free Forever** (2026-08-28) — Clone Calendly with Codex and self-host a free scheduling app
+  - Watch: https://youtu.be/PYjbeY8sGLs
+  - Has resources: yes (not linked — send students to the video)
+- **The 3 AI Agency Mistakes Keeping You From $20K/Month Retainers** (2026-08-25) — Diagnose constraints, set a KPI, and price on value to win $20K/mo retainers
+  - Watch: https://youtu.be/DoHPZf7jEQ4
+  - Has resources: yes (not linked — send students to the video)
+- **I Built The Ultimate Claude Website Design Skill (steal this)** (2026-08-22) — Turn ordinary landing pages into premium scroll-driven sites with Scrollcraft
+  - Watch: https://youtu.be/QUI6Ug4cHnE
+  - Has resources: yes (not linked — send students to the video)
+- **Turn Claude Into a One Person Marketing Team in 38 Mins** (2026-08-21) — Build a one person marketing team with Claude Code and Higgsfield
+  - Watch: https://youtu.be/yCACmFTiCto
+  - Has resources: yes (not linked — send students to the video)
+- **Sell These 5 Most In Demand AI Automations in 2026** (2026-08-20) — The 5 AI automations businesses are actually paying for in 2026
+  - Watch: https://youtu.be/tgjYMym_0-c
+  - Has resources: yes (not linked — send students to the video)
+- **How to Sell Claude Workflows (Without Starting an Agency)** (2026-08-18) — Become the in-house AI person instead of starting an AI agency
+  - Watch: https://youtu.be/zpS6JGJNaGg
+  - Has resources: yes (not linked — send students to the video)
+- **How to Build a One Person AI Business (Using Claude Code)** (2026-08-11) — Build a one person AI consulting business with Claude Code
+  - Watch: https://youtu.be/LVAHYV4Xrto
+  - Has resources: yes (not linked — send students to the video)
+- **Build & Sell AI SaaS Products (2 HOUR COURSE)** (2026-08-10) — Build and sell an AI SaaS product in one day with Claude and Codex
+  - Watch: https://youtu.be/IVx8OSMbTss
+  - Has resources: yes (not linked — send students to the video)
+- **5000 Hours of Building AI in Just 17 Minutes** (2026-08-04) — 12 lessons from 5,000 hours of building AI, from receipts to model routing
+  - Watch: https://youtu.be/7WZ6XldxX0U
+  - Has resources: yes (not linked — send students to the video)
+- **18 Months of Pricing AI Automations in 21 Mins** (2026-08-01) — Price AI builds off client value, not hours, and get paid in stages
+  - Watch: https://youtu.be/Lg5TYWPSg6M
+  - Has resources: yes (not linked — send students to the video)
 - **I Tested Opus 5 vs. Fable 5. What You Need to Know.** (2026-07-24) — Opus 5 vs Fable 5 head-to-head: real costs, tokens, and time
   - Watch: https://youtu.be/2J3uX8iRNng
   - Has resources: yes (not linked — send students to the video)

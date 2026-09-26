@@ -1,19 +1,28 @@
-# Diagnostic — Lesson 1.4 / n8n MCP Server
+# Diagnostic: connecting n8n to Claude Code with the n8n MCP server
 
-Use this when a student is stuck setting up the n8n MCP server (course lesson 1.4) or anything in its neighborhood: "the video doesn't match what I see", "I have 100x more files than Kodi", "no n8n API menu", "/mcp doesn't show n8n", "multiple .env files". This is still one of the highest-volume setup topics in the AIS+ corpus (15+ threads), though course access/navigation now outpaces it by volume.
+Use this when a student is stuck connecting n8n to Claude Code through the n8n MCP server, or anything in its neighborhood: "I got 100x more files than I expected", "no n8n API menu", "/mcp doesn't show n8n", "multiple .env files", "my setup doesn't look like the video". This is still one of the highest-volume setup topics in the AIS+ corpus (15+ threads), though course access/navigation now outpaces it by volume.
 
-**Default to what Nate's lesson actually teaches.** Lesson 1.4 has you ask Claude Code to install n8n-mcp **at the project level** (not user-level), configure credentials via a `.env` file (never paste them in chat), and verify with `/mcp` + a "List my n8n workflows" health check. The video walks through the install but doesn't lock you to a single command path — Claude may pick `npm install` inside a cloned repo, `claude mcp add`, or something else.
+**No classroom lesson covers this setup.** Most of the corpus threads came from the old Claude Code lesson 1.4 (n8n MCP Server), which is gone from the classroom, with its whole section, as of 2026-09-30. Nothing that survives sets up the n8n MCP server: no lesson covers the n8n API key, the instance URL or the project scope for it. So never send a student to a lesson for this setup, never describe what "the lesson" or "the video" teaches about it, and never point at a checklist PDF. A student who took the old course may still say "1.4", "Kodi's video" or "the checklist": read that as n8n MCP context and answer from the steps below. A bare "1.4" with no n8n or MCP in the message is a different lesson (Phase 2, 3 and 4 each have one), so route it per SKILL.md.
 
-The two things lesson 1.4 IS strict about:
-1. **Project-level scope** ("configuring the MCP server at the project level to avoid common security warnings" — direct from the lesson summary).
-2. **Credentials in `.env`**, never in chat.
+**Where you can point them, and what each one covers.** Only these, and only for what the note says:
 
-⚠️ **But a correct `.env` alone does NOT register the MCP server.** This is the trap that produces "I did everything and `/mcp` still shows nothing" (team-verified in a solved thread): **Claude Code does not read `.env` files for MCP server configuration.** The credentials have to be supplied at the moment the server is registered — that's the `-e` flags on `claude mcp add`. Keeping secrets in `.env` is still the right habit for everything else in the project (and it's what the lesson means), but if the student's `.env` is perfect and `/mcp` is empty, the registration step is what's missing, not the file.
+- `Claude Code → Phase 2: Mastering Claude Code → 1.5 Introduction to MCP Servers in Cloud Code` (lesson-id `f1969481d1ed4d94b7d2c655d194ae78`): MCP servers in general, not the n8n one.
+- `7 Day AIS Challenge → Build: Set Up Firecrawl MCP & Scrape a Site` (lesson-id `dbd31c8b94e14eb3be2cb49e5952d181`): connecting an MCP server in general, with Firecrawl.
+- `Claude Code → Phase 1: AI Operating System → 9. APIs and .env` (lesson-id `22b8eb9948fa4428b5ee4eb7f4bb23ed`): what a `.env` file is and why keys live there.
+- Nate's YouTube videos, by title only (from `knowledge/video-map.md`): "Claude Code is Better at n8n than I am (Beginner's Guide)", "Build ANYTHING with Claude Code & n8n (Beginner's Guide)", "I Will Never Fix Another n8n Workflow (Claude Code)". Their exact content has not been checked, so never say one of them walks through an install step.
 
-**"npx" means three different things here — keep them straight.** Kodi's warning in the video only covers one of them, and a student who heard a flat "don't use npx" will refuse the support team's own recommended command:
+**The defaults.** Have Claude Code set up n8n-mcp **at the project level** (not user-level), keep credentials out of the chat (secrets live in `.env` for the rest of the project), and verify with `/mcp` plus a "List my n8n workflows" check. Claude Code may pick different commands on different runs (`npm install` inside a cloned repo, `claude mcp add`, or something else); what matters is the end state.
 
-1. **Registering the MCP server so it launches via the npx package** — `claude mcp add n8n-mcp ... -- npx n8n-mcp` — is the route the support team recommends in recent solved threads. It's the cleanest path because it avoids cloning the repo entirely. Not what the video shows (the video clones), but what the team recommends now. **This is fine to run.**
-2. **Running `npx <package>` ad-hoc as the install command** — Claude proposing "let me just npx this" instead of doing a proper install — is what Kodi's warning targets. **Decline that.**
+The two things not to bend on:
+1. **Project-level scope**, so the server belongs to this project and shows under `/mcp` here (see Step 4b).
+2. **Credentials never pasted in chat.**
+
+⚠️ **But a correct `.env` alone does NOT register the MCP server.** This is the trap that produces "I did everything and `/mcp` still shows nothing" (team-verified in a solved thread): **Claude Code does not read `.env` files for MCP server configuration.** The credentials have to be supplied at the moment the server is registered, which is what the `-e` flags on `claude mcp add` do. Keeping secrets in `.env` is still the right habit for everything else in the project, but if the student's `.env` is perfect and `/mcp` is empty, the registration step is what's missing, not the file.
+
+**"npx" means three different things here, so keep them straight.** Students who followed the old course lesson heard a warning against letting Claude run npx, and a student who took it as a flat "don't use npx" will refuse the registration command that works best:
+
+1. **Registering the MCP server so it launches via the npx package** (`claude mcp add n8n-mcp ... -- npx n8n-mcp`) is the route the support team has used in recent solved threads. It's the cleanest path because it avoids cloning the repo entirely. **This is fine to run.**
+2. **Running `npx <package>` ad-hoc as the install command** (Claude proposing "let me just npx this" instead of doing a proper install) is what that warning was about. **Decline that.**
 3. **`npm install` / `npm run build`** are a third, different thing: they populate a cloned repo's dependencies. **Approve those** if a clone already happened. Students wrongly declining `npm install` because they heard "don't use npx" is a top-5 cause of failed setups.
 
 If a student is refusing the registration command in (1) because of the warning about (2), explaining this distinction IS the fix.
@@ -27,7 +36,7 @@ If a student is refusing the registration command in (1) because of the warning 
 
 The exception: if the student is genuinely starting from zero ("I don't know where to begin"), then Steps 1-4 in order is the right walk-through.
 
-**Before you start: the escape hatch.** The support team has publicly told students they can skip 1.4 and keep learning if they get stuck — section 2 doesn't depend on a working n8n-mcp. Mention this if the student sounds frustrated, but only after at least one fix attempt. Don't lead with it.
+**Before you start: the escape hatch.** A working n8n MCP connection is not a prerequisite for the Claude Code course: no lesson in Phases 1 to 4 uses it. If the student is working through the course and sounds frustrated, tell them they can keep going and come back to the n8n connection later, but only after at least one fix attempt. Don't lead with it.
 
 ---
 
@@ -46,11 +55,11 @@ Ask (or infer from the transcript):
 
 ### Step 1a — Free trial has no API menu
 
-If they say "Settings → n8n API doesn't exist" or "Kodi shows an API option but I don't have it":
+If they say "Settings → n8n API doesn't exist" or "the video shows an API option but I don't have it":
 
 - The API key endpoint is gated to **paid Cloud plans or self-hosted**. Free trial doesn't surface it.
 - **Newer n8n UI**: the same info now lives under `Settings → Instance-level MCP → Connection details`. Have them check there first.
-- If it's genuinely missing: their options are (a) upgrade to a paid Cloud plan, (b) self-host (Hostinger 1-click template is the path of least resistance), or (c) skip 1.4 and continue with section 2.
+- If it's genuinely missing, their options are (a) upgrade to a paid Cloud plan, (b) self-host (Hostinger 1-click template is the path of least resistance), or (c) set the n8n connection aside for now, since nothing in the Claude Code course phases needs it.
 
 <!-- pattern: /14-n8n-mcp-server-cant-find-api-n8n-key, /not-seeing-the-n8n-the-menu-bar -->
 
@@ -63,12 +72,12 @@ This is the single biggest source of confusion. This framing is the clearest in 
 > There are two different tools called "n8n MCP".
 >
 > 1. **n8n's official instance-level MCP** (built into n8n itself, under Settings → Instance-level MCP). This **exposes your existing workflows TO Claude** so Claude can run them. Useful for Claude Desktop chat.
-> 2. **czlonkowski/n8n-mcp** (community, separate server). This **gives Claude knowledge of every n8n node + validation tools** so Claude can BUILD workflows for you. The AIS+ course uses this one.
+> 2. **czlonkowski/n8n-mcp** (community, separate server). This **gives Claude knowledge of every n8n node + validation tools** so Claude can BUILD workflows for you.
 >
 > Which are you setting up?
 
-- 99% of students need **czlonkowski/n8n-mcp**. The course is about Claude Code building workflows, not Claude Desktop running them.
-- If they only want Claude Desktop to trigger existing workflows → that's the native one, configured in n8n itself, not in Claude Code. Different lesson.
+- Almost every student asking this needs **czlonkowski/n8n-mcp**, because they want Claude Code to build workflows, not Claude Desktop to run them.
+- If they only want Claude Desktop to trigger existing workflows, that's the native one, configured in n8n itself, not in Claude Code. See Step 9.
 
 <!-- pattern verified in /n8n-mcp-connection -->
 
@@ -76,11 +85,11 @@ This is the single biggest source of confusion. This framing is the clearest in 
 
 ## Step 3 — Confirm the install path
 
-**What lesson 1.4 actually says**: have Claude install n8n-mcp at the project level, with `.env`-stored credentials. The lesson video walks through the install (via a clone) but doesn't pin you to one specific command. Two paths work: the **clone path** the video shows, and the **npx registration path** the support team now recommends (below).
+Two paths work: the **npx registration path** (below, and the one to recommend) and the **clone path**, where Claude clones the czlonkowski/n8n-mcp repo and builds it. Either way the defaults at the top of this file apply: project level, credentials never in chat.
 
-Common confusion: Kodi warns against Claude running an ad-hoc `npx <package>` as its install command. Students hear "don't approve npx" and then **also reject `npm install`** — that's wrong, and it's a top-5 cause of failed setups. Three different things:
-- `claude mcp add ... -- npx n8n-mcp` = registering the server so it launches via the npx package. **Team-recommended. Fine to run.**
-- Claude proposing ad-hoc `npx <package>` as the install step = what Kodi's warning targets. **Decline.**
+Common confusion: students who heard a warning against letting Claude run an ad-hoc `npx <package>` then **also reject `npm install`**. That's wrong, and it's a top-5 cause of failed setups. Three different things:
+- `claude mcp add ... -- npx n8n-mcp` = registering the server so it launches via the npx package. **The recommended route. Fine to run.**
+- Claude proposing ad-hoc `npx <package>` as the install step = what the warning was about. **Decline.**
 - `npm install` / `npm run build` = populate a cloned repo's dependencies. **Approve** if a clone already happened.
 
 **Rule of thumb**: approve `npm install`, `npm run build`, `git clone`, Node.js install prompts, and the `claude mcp add ... -- npx n8n-mcp` registration. Decline only an ad-hoc `npx <package>` offered as the install command itself.
@@ -89,18 +98,18 @@ Common confusion: Kodi warns against Claude running an ad-hoc `npx <package>` as
 
 Don't prescribe a from-scratch install path — walk through the actual symptom:
 
-- **Claude is asking for `npm install` and they're not sure**: approve it. (See above — different from the ad-hoc `npx` Kodi warns about.)
-- **They cloned the repo and got "100x more files than the video"**: that's normal for a clone. They need to finish whatever install Claude started. Ask them to tell Claude "finish the n8n-mcp setup", and approve every command Claude asks for — decline only an ad-hoc `npx <package>` offered as the install step. (If they'd rather not deal with the clone at all, the npx registration route below drops it entirely.)
+- **Claude is asking for `npm install` and they're not sure**: approve it. (See above. It is not the ad-hoc `npx` install the warning was about.)
+- **They cloned the repo and got "100x more files than the video"**: that's normal for a clone. They need to finish whatever install Claude started. Ask them to tell Claude "finish the n8n-mcp setup", and approve every command Claude asks for. Decline only an ad-hoc `npx <package>` offered as the install step. (If they'd rather not deal with the clone at all, the npx registration route below drops it entirely.)
 - **Multiple `.env` files in the cloned folder**: `.env.example` and `.env.docker` are templates. Only the plain `.env` matters. Have Claude copy `.env.example` → `.env` and fill in the values.
-- **They haven't started yet**: have them ask Claude to install n8n-mcp at the project level. Point them at the Pre-Flight Setup Checklist PDF attached to lesson 1.4 first — it covers prereqs (Node.js, n8n API key, Homebrew on Mac).
+- **They haven't started yet**: check the prerequisites first, which are Node.js installed (`node --version` returns a version), an n8n API key (n8n → Settings → n8n API), and Homebrew on Mac. Then give them the npx registration route below.
 
 <!-- pattern: /mpc-server-set-up, /trouble-with-setting-up-n8n-mcp-server-in-vs-claude-code -->
 
 ### Recommended path: register via the npx package (no clone)
 
-This is what the support team recommends in recent solved threads, and it's the cleanest route because it skips the clone entirely. Two ways to get there:
+This is what the support team has used in recent solved threads, and it's the cleanest route because it skips the clone entirely. Two ways to get there:
 
-- **In Claude Code**: "add the n8n-mcp server as an MCP connection using the npx n8n-mcp package, do not clone or download anything." That wording leaves nothing to misread — Claude will ask for the n8n URL and API key and write the config itself.
+- **In Claude Code**: "add the n8n-mcp server as an MCP connection using the npx n8n-mcp package, do not clone or download anything." That wording leaves nothing to misread. Claude will ask for the n8n URL and API key and write the config itself.
 - **From a normal terminal** (not inside Claude Code chat), run it directly:
 
 ```
@@ -109,9 +118,9 @@ claude mcp add n8n-mcp --scope project -e MCP_MODE=stdio -e LOG_LEVEL=error -e D
 
 ⚠️ **Placeholder alert — never show this command verbatim.** `https://your-n8n-instance.com` and `your-api-key` are placeholders. Substitute the student's real n8n URL (the exact address they type in their browser to open n8n) and their real API key (n8n → Settings → n8n API → Create API Key) before presenting it — or ask for those two values first. A beginner will paste the placeholders as-is and get a connection failure.
 
-Be honest about the provenance: **this is not what the lesson video walks through** (the video clones), but it is what the support team recommends now. Say it that way — "not what the video shows, but what the team recommends now." It is a primary path, not a fallback.
+Present it as the route to take, in your own voice ("I'd go with the npx route, it skips the clone entirely"), not as a team rule. It is a primary path, not a fallback. If the student mentions a video or guide that cloned the repo, say plainly that the clone works too and this route just skips it, so they don't read the difference as something they got wrong.
 
-And if the student pushes back with "but Kodi said no npx": this is the registration form, not the ad-hoc install command. See the three-way distinction at the top of this file.
+And if the student pushes back with "but I was told no npx": this is the registration form, not the ad-hoc install command. See the three-way distinction at the top of this file.
 
 ---
 
@@ -142,7 +151,7 @@ Rule: paste exactly the URL they use to open n8n in their browser. No `/api/v1`.
 
 ### 4b. Scope: `--scope project` matters
 
-- `--scope project` writes config to `.mcp.json` in the project root. Per-project, recommended for the course.
+- `--scope project` writes config to `.mcp.json` in the project root. Per-project, and the scope to use.
 - Without it, the default writes user-scope → the MCP loads everywhere, AND it won't show under `/mcp` if Claude Code's working directory doesn't match expectations.
 - If they already installed without `--scope project` and `/mcp` doesn't show n8n-mcp, ask them to remove it (`claude mcp remove n8n-mcp`) and re-add with `--scope project`.
 
@@ -161,9 +170,9 @@ After running the add command:
    - Remove `n8n-mcp` from the `disabledMcpjsonServers` list.
    - Restart Claude Code — the prompt will reappear.
 3. Run `/mcp` inside Claude Code → `n8n-mcp` should show as **connected**.
-4. End-state check (this is the one that matters, not the visual match to the video): ask Claude in chat "List my n8n workflows." If it returns workflows, the connection is real.
+4. End-state check (this is the one that matters, not a visual match to any video or screenshot): ask Claude in chat "List my n8n workflows." If it returns workflows, the connection is real.
 
-**Normalize this for them**: "Your terminal output won't look exactly like Kodi's video. Claude Code is non-deterministic. The video frame is not the success criterion — `/mcp` showing connected + Claude listing workflows IS." (Covered in corpus-notes.)
+**Normalize this for them**: "Your terminal output won't look exactly like a video or a screenshot. Claude Code is non-deterministic. `/mcp` showing connected and Claude listing your workflows is the success check, not how the screen looks." (Covered in corpus-notes.)
 
 ---
 
@@ -194,7 +203,7 @@ If they're on Windows:
 - **PowerShell execution policy** can block scripts during install. If they hit "running scripts is disabled on this system": in a **normal** (non-admin) PowerShell window run `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`, type `Y`. `-Scope CurrentUser` does not need Administrator — and installing from an elevated window is itself a cause of "claude: command not found" later, because the PATH entry lands on the wrong profile. ⚠️ On a work-managed laptop, don't change execution policy without asking IT first.
 - **PATH after install**: if `claude` or `npx` is "not found" in a fresh terminal, manually add `%USERPROFILE%\.local\bin` to User PATH via Environment Variables, then open a brand new PowerShell window.
 - Use Shift+Tab inside Claude Code to cycle permission modes — they might be hitting confirmations they could bypass.
-- Backslash line continuations from the standard command don't work in PowerShell — use the one-line PowerShell version in Step 4.
+- Backslash line continuations from the standard command don't work in PowerShell, so use the one-line version in Step 3.
 
 <!-- pattern: /need-help-connecting-n8n-mcp-server-on-hostinger -->
 
@@ -219,7 +228,7 @@ If they're on Hostinger or another self-hosted setup:
 
 ## Step 9 — Connecting self-hosted n8n MCP to Claude Desktop (NOT Claude Code)
 
-If their goal turned out to be exposing self-hosted n8n to Claude Desktop chat (different from the course path):
+If their goal turned out to be exposing self-hosted n8n to Claude Desktop chat (different from connecting Claude Code):
 
 1. Edit `claude_desktop_config.json`:
    - Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -300,4 +309,4 @@ Switch to drafting a Support Needed post (see SKILL.md Escape Hatch B). Pre-fill
 
 No need to tag anyone — the support team watches Support Needed‼️ and a well-formed post gets picked up.
 
-And remind them: 1.4 is optional. They can move to section 2 anytime and circle back.
+If they are working through the Claude Code course, remind them it does not depend on this connection: they can keep going and come back to n8n later.

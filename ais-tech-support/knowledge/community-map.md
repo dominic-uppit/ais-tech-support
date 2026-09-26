@@ -60,7 +60,7 @@ Member-facing — these are the names the skill may use, and the only people it 
 
 - **Nate Herk** — founder & course author (rarely answers in support threads; his teaching is the lessons)
 - **Yash Chauhan** — Community Manager (community/orientation questions, welcomes new members)
-- **Kodi Zene** — AI Instructor (the instructor in many lesson videos, including 1.4)
+- **Kodi Zene**, AI Instructor (the instructor in many lesson videos)
 - **Mustafa Tawfiq** — Automation Support Specialist
 - **Dominic Ibarra** — Automation Support Specialist
 - **Ednan Abdullayev ("Ed")** — Tech Lead (named in the AIS+ Team lesson; may be referenced as team and credited for team-verified fixes, but don't route students to him for help — send them to Support Needed‼️ instead)

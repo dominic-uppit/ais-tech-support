@@ -31,7 +31,7 @@ See also `diagnostics/claude-code-install.md` and `diagnostics/vscode-extension-
 4. Verify: `claude --version` — should return a version, not "command not found".
 5. If still failing, manually add `$HOME/.local/bin` to PATH via your shell's RC file.
 
-**Lesson reference**: Claude Code → Phase 1 → 1.1 INTRODUCTION
+**Lesson reference**: `Claude Code → Phase 1: AI Operating System → 3. Installing Claude Code` covers installing Claude Code and its interfaces. The PATH fix above is not in it.
 
 **Confidence**: high
 
@@ -330,12 +330,12 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 
 ## N8N + MCP — Setup
 
-## n8n MCP setup creates massive folder vs the video shows tiny one
-**Symptom**: "Cloned the repo and got 100x more files than the video"; "Multiple .env files". Also: Source Control floods with hundreds of pending changes, and — the part that actually blocks people — even with the API key and instance URL correctly in `.env`, Claude Code replies that it has no connection to your n8n instance.
+## n8n MCP setup creates massive folder, and Claude Code still can't see n8n
+**Symptom**: "Cloned the repo and got 100x more files than I expected"; "Multiple .env files". Also: Source Control floods with hundreds of pending changes, and (the part that actually blocks people) even with the API key and instance URL correctly in `.env`, Claude Code replies that it has no connection to your n8n instance.
 
-**Root cause**: The folder size and multiple `.env` files are NORMAL if Claude went the clone route. The student is on the right path — they just need to FINISH whatever install Claude started. The most common reason they're stuck is that they rejected `npm install` when Claude Code asked (often confused by Kodi's warning about `npx`, which is a different command). Handing Claude Code the repo URL reads as "download and build this project", so it clones the full source. Separately and more importantly: **Claude Code does not read `.env` files when configuring an MCP server.** The credentials have to be supplied at the moment the server is registered, so a perfectly correct `.env` leaves the MCP server unregistered and invisible.
+**Root cause**: The folder size and multiple `.env` files are NORMAL if Claude went the clone route. The student is on the right path; they just need to FINISH whatever install Claude started. The most common reason they're stuck is that they rejected `npm install` when Claude Code asked (often confused by a warning they remember about `npx`, which is a different command). Handing Claude Code the repo URL reads as "download and build this project", so it clones the full source. Separately and more importantly: **Claude Code does not read `.env` files when configuring an MCP server.** The credentials have to be supplied at the moment the server is registered, so a perfectly correct `.env` leaves the MCP server unregistered and invisible.
 
-**What lesson 1.4 actually teaches**: Nate's lesson has you ask Claude Code to install n8n-mcp at the **project level**, configure credentials via `.env`, and verify with `/mcp` + a health check. The lesson video walks through the install but doesn't lock you to one specific command path — Claude may pick `npm install` inside a cloned repo, `claude mcp add`, or another command. The two things lesson 1.4 IS strict about:
+**Whichever command path Claude Code picks** (`npm install` inside a cloned repo, `claude mcp add`, or another), the install is verified with `/mcp` plus a health check, and these two stay constant:
 1. **Configure at project level**, not user-level (avoids common security warnings).
 2. **Credentials go in `.env`**, never in chat.
 
@@ -346,9 +346,9 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
    claude mcp add n8n-mcp -e MCP_MODE=stdio -e LOG_LEVEL=error -e DISABLE_CONSOLE_OUTPUT=true -e N8N_API_URL=<your n8n URL> -e N8N_API_KEY=<your n8n API key> -- npx n8n-mcp
    ```
    ⚠️ `<your n8n URL>` is the address you type in your browser to open n8n — ask the student for it if you don't already have it. `<your n8n API key>` is generated inside n8n at Settings → n8n API → Create API Key. Never show this command with the angle brackets left in.
-3. **Two different meanings of "npx" — keep them straight, because the lesson's warning only covers one of them.**
-   - **Registering the MCP server so it launches via the npx package** (`claude mcp add ... -- npx n8n-mcp`, step 2 above) is the route the support team recommends in the 2026-07 threads. It is what avoids the clone entirely. This is fine.
-   - **Running `npx <package>` ad-hoc as the install command** — Claude proposing "let me just npx this" instead of doing a proper install — is what the lesson cautions against. Decline that.
+3. **Two different meanings of "npx", worth keeping straight, because students who took the older n8n MCP lesson remember a warning that only covers one of them.**
+   - **Registering the MCP server so it launches via the npx package** (`claude mcp add ... -- npx n8n-mcp`, step 2 above) is the route the 2026-07 support threads converged on. It is what avoids the clone entirely. This is fine.
+   - **Running `npx <package>` ad-hoc as the install command** (Claude proposing "let me just npx this" instead of doing a proper install) is what that warning was about. Decline that.
    - `npm install` and `npm run build` are a third, different thing: they populate a cloned repo's dependencies. **Approve those** if a clone already happened.
    - If a student has heard a flat "don't use npx" and is therefore refusing the team's own recommended registration command, this distinction is the thing to explain.
 4. About "multiple .env files" — `.env.example` and `.env.docker` are templates, not active config. Only the plain `.env` matters. Have Claude copy `.env.example` → `.env` and fill in the values. Anything with a suffix (`.env.example`, `.env.docker`) is a blank template for a different hosting method — only the file named exactly `.env` matters. Ask Claude Code to locate or create it for you.
@@ -358,21 +358,21 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
    - ⚠️ Both values above are placeholders — when giving this step to a student, swap in their real n8n URL (the exact address they type in their browser to open n8n) if known, or ask for it; never present `your-n8n-instance.com` / `your-api-key` bare, because beginners paste them literally.
 6. Fully quit Claude Code (close all VS Code windows; on CLI exit session), then reopen the project. Approve the "Allow this project's MCP servers?" prompt.
 7. Run `/mcp` inside Claude Code → `n8n-mcp` should show as connected.
-8. Test (this is the "Health Check Confirmation" chapter of the lesson): ask Claude in chat "List my n8n workflows." Real workflows back = connection is real.
+8. Health check: ask Claude in chat "List my n8n workflows." Real workflows back = connection is real.
 - **Source Control noise is not your work.** The hundreds of pending changes after a clone are the repo's own files. Do not commit them. If you switch to the npx route you can delete the cloned folder entirely.
 - **Docker is a valid alternative** if you already run Docker locally: register the MCP server as a `docker run` against the maintainer's published image. Tradeoffs the team flagged — Docker Desktop must be running whenever you start a Claude Code session, and the image will not update itself, where npx pulls the latest each run.
 
-**If stuck mid-install**: walk through the actual symptom (the exact error or step they're on) rather than starting from scratch. The Pre-Flight Setup Checklist PDF attached to lesson 1.4 covers the prerequisites (Node.js install, n8n API key generation, Homebrew on Mac) — point them there if they haven't read it.
+**If stuck mid-install**: walk through the actual symptom (the exact error or step they're on) rather than starting from scratch. Check the prerequisites before anything else: Node.js installed (`node --version`), Homebrew on Mac (`brew --version`), and an n8n API key generated inside n8n at Settings → n8n API.
 
-**On the npx registration route vs the video**: `claude mcp add ... -- npx n8n-mcp` is not what the lesson video walks through (the video goes through a clone), but it is what the support team recommends in the 2026-07 threads and it is the cleanest path — see fix step 1. Be honest about that provenance when you offer it: "not what the video shows, but what the team recommends now." This is distinct from Claude proposing an ad-hoc `npx` as its install command, which is what the lesson cautions against.
+**On the npx registration route**: `claude mcp add ... -- npx n8n-mcp` is the cleanest path (fix step 1) and the one the 2026-07 support threads converged on. A student who took the older n8n MCP lesson saw the install done through a clone, so when you offer the npx route to them, say plainly that it differs from what they saw and that it is fine. This is distinct from Claude proposing an ad-hoc `npx` as its install command, which is the thing to decline.
 
 **Important gotchas**:
 - **`N8N_API_URL` is the base only** — paste the root URL you browse to, with no `/api/v1`. The MCP appends the API path itself. (Recent n8n-mcp versions normalise trailing slashes and detect an already-present `/api/v1`, so they won't double the path — don't assume a URL-format typo is the cause of a 404 without checking the version.)
 - For browser URL `https://yourname.app.n8n.cloud/api/v1`, use `https://yourname.app.n8n.cloud`.
-- **Project-level scope matters**: lesson 1.4 explicitly configures the MCP at the project level. If a student installed user-scope, `/mcp` may not show it where expected.
+- **Project-level scope matters**: configure the MCP at the project level. If a student installed user-scope, `/mcp` may not show it where expected.
 - If you denied the project-MCP prompt previously, edit `~/.claude.json` (or `%USERPROFILE%\.claude.json` on Windows), find your project's path entry, remove `n8n-mcp` from the disabled servers list to get re-prompted.
 
-**Lesson reference**: Claude Code → Phase 1 → 1.4 n8n MCP Server (lesson has a "Pre-Flight Setup Checklist" PDF attached — covers Node.js install, Homebrew on Mac, n8n account + API key, and "watch out for this" moments. Point students there if they haven't read it).
+**Lesson reference**: no current classroom lesson sets up the n8n MCP server. For MCP servers in general (what they are, how to connect one), `Claude Code → Phase 2: Mastering Claude Code → 1.5 Introduction to MCP Servers in Cloud Code`. For keys and `.env` in general, `Claude Code → Phase 1: AI Operating System → 9. APIs and .env`. Neither covers the n8n API key or URL.
 
 **Confidence**: high — multiple solved threads converge.
 
@@ -395,7 +395,7 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 - **Community czlonkowski/n8n-mcp** — runs separately, gives Claude Code knowledge of every n8n node + validation tools so it can BUILD workflows.
 
 **Fix steps**:
-1. For the AIS+ course → install czlonkowski/n8n-mcp (the BUILD one).
+1. For having Claude Code build n8n workflows → install czlonkowski/n8n-mcp (the BUILD one).
 2. For just exposing n8n workflows to Claude Desktop chat → use the n8n native instance-level MCP.
 
 **Lesson reference**: `Claude Code → Phase 2 → 1.5 Introduction to MCP Servers in Cloud Code` covers what MCP servers are, how to find them, and how to connect them to Claude Code — good background for students who don't yet have the MCP concept.
@@ -407,7 +407,7 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 ---
 
 ## n8n free trial has no "API" menu — can't get API key
-**Symptom**: "Kodi says go to Settings → n8n API but it doesn't exist."
+**Symptom**: "The setup says go to Settings → n8n API but it doesn't exist."
 
 **Root cause**: API key generation requires a paid Cloud plan OR self-hosted instance. Free trial doesn't surface it. New UI may put it under Settings → Instance-level MCP → Connection details. Note the common counter-claim: some community advice says no payment is needed at all. That is true only in the sense that self-hosting is free — the free Cloud trial genuinely cannot produce a key.
 
@@ -418,7 +418,6 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 4. **Option C — an always-on self-hosted instance on a low-cost VPS.** Hostinger offers a one-click n8n template; several members in these threads moved to it as a cheaper alternative to n8n Cloud.
 5. The team's recommendation for anyone intending to keep going: move to a paid plan or a properly hosted instance sooner rather than later — you will need it eventually and switching later costs time.
 6. Once you have an instance, generate the key at **Settings → n8n API → Create API Key**.
-7. If learning only, skip section 1.4 and continue to section 2 (other students have done this without issue).
 
 **Confidence**: high
 
@@ -443,11 +442,11 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 - **Give `N8N_API_URL` as the bare root** (no `/api/v1`, no trailing slash) — that's the form the MCP expects. Two students in the 2026-07 threads fixed a 404 by correcting this field. Note current n8n-mcp versions strip trailing slashes and won't double `/api/v1`, so if the URL already looks right, check the installed version and the open issues at github.com/czlonkowski/n8n-mcp/issues rather than re-editing the URL.
 
 2. In n8n, go to Settings → n8n API → Create an API key (the menu is "n8n API", not "API"). Copy into `N8N_API_KEY` in `.env`.
-3. Install MCP via the canonical clone path (see "n8n MCP setup creates massive folder" above). Hostinger n8n is just a different URL — the install procedure is the same.
+3. Install the MCP server with the steps in "n8n MCP setup creates massive folder" above. Hostinger n8n is just a different URL, and the install procedure is the same.
 4. **Restart Claude Code** to pick up the .env.
 5. `/mcp` should show n8n-mcp as connected.
 6. **If `/mcp` shows connected but you get a 404 / "resource not found" / "can't find workflows"** — known Hostinger/self-hosted quirk with two verified fixes, in order:
-   - **Base-URL path mismatch** (team-verified): the API path must appear exactly once. czlonkowski n8n-mcp wants the bare root in `N8N_API_URL` and appends `/api/v1` itself; other tools (e.g. the n8n node's own API credential) need `/api/v1` written out explicitly. A missing OR doubled `/api/v1` both produce a 404. If you're 404ing, toggle the URL to the other form and retry. Concrete forms: for a self-hosted instance (for example on Hostinger), `N8N_API_URL` is the address you use to open n8n in your browser plus `/api/v1` — the exact host is whatever your browser shows when n8n is open; ask the student for it rather than guessing. For n8n Cloud the instance URL is the plain workspace address with no path (the form the lesson demonstrates); if Management tools still fail on that, append `/api/v1`.
+   - **Base-URL path mismatch** (team-verified): the API path must appear exactly once. czlonkowski n8n-mcp wants the bare root in `N8N_API_URL` and appends `/api/v1` itself; other tools (e.g. the n8n node's own API credential) need `/api/v1` written out explicitly. A missing OR doubled `/api/v1` both produce a 404. If you're 404ing, toggle the URL to the other form and retry. Concrete forms: for a self-hosted instance (for example on Hostinger), `N8N_API_URL` is the address you use to open n8n in your browser plus `/api/v1`; the exact host is whatever your browser shows when n8n is open, so ask the student for it rather than guessing. For n8n Cloud the instance URL is the plain workspace address with no path; if Management tools still fail on that, append `/api/v1`.
    - **API key generated in the wrong place** (community-verified): the key must come from inside n8n itself (Settings → n8n API → Create API Key) — NOT from the Hostinger panel. Create a fresh key with no expiration date and the default scopes, update `.env`, restart.
 7. Still stuck after both → draft a Support Needed‼️ post (Escape Hatch B); the support team maintains workaround knowledge for Hostinger edge cases.
 - **Before blaming the URL, confirm Node.js is installed** — run `node --version` in a terminal. One student in these threads spent multiple attempts on URL variations when the real blocker was that Node.js was never installed, so the MCP server could not run at all.
@@ -519,16 +518,16 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 ---
 
 ## "Claude wants to npm install — should I let it?"
-**Symptom**: During the n8n-mcp install, Claude asks to run `npm install`. Student denies (thinking it's the `npx` Kodi warned about), then everything fails.
+**Symptom**: During the n8n-mcp install, Claude asks to run `npm install`. Student denies (thinking it's the `npx` they were warned about), then everything fails.
 
-**Root cause**: A mishearing of the lesson audio. Students recall a warning about letting Claude run `npx` or `npm` and generalise it into declining `npm install`. `npm install` is not the thing to avoid — it fetches the dependency packages the MCP server needs in order to run at all, so declining it guarantees the setup fails.
+**Root cause**: A misremembered warning. Students who took the older n8n MCP lesson recall a warning about letting Claude run `npx` or `npm` and generalise it into declining `npm install`. `npm install` is not the thing to avoid: it fetches the dependency packages the MCP server needs in order to run at all, so declining it guarantees the setup fails.
 
 **Fix steps**:
 1. **Approve `npm install`** when prompted. (This is separate from the `npx` warning.)
 - If you want to see what will be installed before approving, switch to **plan mode** first, read the plan, then accept. This is the right response to "I don't want to blindly approve installs" — not declining.
 2. Also approve `npm run build` if asked.
 3. If Node.js wasn't installed first, Claude will ask to install it — approve that too. On Mac, also ensure Homebrew is installed (`brew --version` to check).
-4. **Decline an ad-hoc `npx <package>` if Claude offers it as its install command** — that's the one the lesson calls out. This does NOT mean refusing `claude mcp add ... -- npx n8n-mcp`, which is the team's recommended registration command and a different thing entirely (see "n8n MCP setup creates massive folder" for the full distinction).
+4. **Decline an ad-hoc `npx <package>` if Claude offers it as its install command**, since that is what the warning was about. This does NOT mean refusing `claude mcp add ... -- npx n8n-mcp`, which is the registration command the support threads converged on and a different thing entirely (see "n8n MCP setup creates massive folder" for the full distinction).
 - **Verify end to end** rather than trusting the install output: ask Claude Code to list your n8n workflows, then ask it to make an edit to one. If both work, the MCP server is genuinely connected.
 
 **Confidence**: high
@@ -593,19 +592,19 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 ---
 
 ## n8n MCP server won't start — Node.js prerequisite missing
-**Symptom**: Lesson 1.4 setup fails repeatedly even though the clone, .env, and config all look right; the MCP server reports failed or not connected. On Mac, Homebrew may also be absent.
+**Symptom**: The n8n MCP setup fails repeatedly even though the clone, .env, and config all look right; the MCP server reports failed or not connected. On Mac, Homebrew may also be absent.
 
 **Root cause**: Node.js was never installed on the machine. The MCP server needs it to run, and students often assume Claude Code installed it for them when in fact it was asking permission to do so.
 
 **Fix steps**:
-1. Do the Pre-Flight Setup Checklist attached to lesson '1.4 n8n MCP Server' BEFORE starting the lesson — it covers exactly this (Node.js, Homebrew on Mac, n8n account and API key, and the common gotchas).
+1. Check the prerequisites before starting the install: Node.js, Homebrew on Mac, and an n8n account with an API key.
 2. Run node --version in a terminal. If nothing comes back, that is the problem: install Node.js from nodejs.org, or ask Claude Code for OS-specific steps and actually approve the install when it asks.
 3. On Mac, also check brew --version and install Homebrew if it is missing.
 4. Rerun the setup in plan mode so you can review what will be installed before it runs — approving npm install is expected and required here.
 5. Strip any trailing slash from N8N_API_URL in your .env. Use https://your-instance-host with no trailing slash — copy the host from your n8n browser address bar, and generate N8N_API_KEY under n8n Settings > n8n API.
-6. Expect the process and the file tree to look different from the video — Claude Code is non-deterministic. Judge it by whether the server starts and your workflows list.
+6. Expect the process and the file tree to look different from any walkthrough you follow, because Claude Code is non-deterministic. Judge it by whether the server starts and your workflows list.
 
-**Lesson reference**: Lesson 1.4 n8n MCP server setup — thread notes the lesson doesn't mention the Node.js prerequisite
+**Lesson reference**: none in the current classroom; no surviving lesson sets up the n8n MCP server.
 
 **Confidence**: high — community-verified
 
@@ -618,7 +617,7 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 ---
 
 ## Homebrew installed but brew not found — login-shell PATH gotcha
-**Symptom**: During preflight setup Homebrew installs fine, but Claude Code reports brew isn't on PATH and offers to reinstall.
+**Symptom**: While installing prerequisites on a Mac, Homebrew installs fine, but Claude Code reports brew isn't on PATH and offers to reinstall.
 
 **Root cause**: The brew shellenv line in ~/.zprofile only loads for login shells in a brand-new terminal window; Claude Code's shell often skips ~/.zprofile.
 
@@ -646,7 +645,11 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 3. Fully quit and reopen Claude Code (not just a reload), and COMPLETE the Trigger.dev login when it prompts — that is the step that actually switches the server on.
 4. Verify with /mcp: it lists the server's status and the tools it loaded. 'Connected but only docs-search works' means the install succeeded and you just need to finish the login. If /mcp shows nothing at all, you're likely in a different folder than where it installed.
 
-**Lesson reference**: Build Your Portfolio — GitHub repo setup lesson and Phase 3 Trigger.dev MCP lesson (taught by Kodi Zene)
+**Where the folder goes ("inside my AIS OS folder, or a new one?")**: a new, separate folder, not a subfolder of the Phase 1 AIS OS folder. In lesson 1.3 GitHub (about 4:05) Claude asks where to create the project folder, and the video takes its recommendation: a new `phase-3-automations` folder in Documents, a clean local path kept clear of Google Drive and other cloud-synced folders. The prompt can be given from Claude Code wherever it is currently open; the student just answers that question with a location outside AIS OS. Lesson 1.4 Trigger Dev (about 2:25) then has the student open that new folder in VS Code (File, Open Folder) and run Claude Code from there, because the Trigger.dev setup writes its files into whichever folder Claude Code is working in. Keeping it outside AIS OS also stops the AIS OS CLAUDE.md from loading into every Phase 3 session, since Claude Code reads CLAUDE.md files in parent folders too.
+
+**No WAT framework to rebuild**: the Phase 3 lessons do not recreate the Phase 2 WAT folders in this project. The Trigger.dev init in lesson 1.4 creates the structure (a trigger config file and a tasks directory), and in 1.6 Masterclass - Scheduled Research Agent the whole automation is a single TypeScript task file. Tell a student who asks that they do not need to set WAT up here; the planning habits carry over, the folders do not.
+
+**Lesson reference**: `Claude Code → Phase 3: Hosting & Deployment → 1.3 GitHub` (creates the project folder) and `→ 1.4 Trigger Dev` (opens it, installs the MCP), taught by Kodi Zene
 
 **Confidence**: high — team-verified
 
@@ -662,12 +665,12 @@ Deny rules are evaluated BEFORE permission modes, so they hard-block even in byp
 **Root cause**: Without the n8n skills repo referenced in CLAUDE.md and the n8n MCP exposing real node schemas, Claude guesses; a just-released model plus stale context makes it worse.
 
 **Fix steps**:
-1. Confirm the n8n skills repo from lesson 1.5 n8n Skills is not just cloned but actually referenced in your CLAUDE.md — reviewing the CLAUDE.md was the step the student had missed, and fixing it resolved her case.
+1. Confirm the n8n skills repo (czlonkowski/n8n-skills; install steps in `knowledge/fix-patterns-config-skills.md`, "Where to drop community skills") is not just cloned but actually referenced in your CLAUDE.md. Reviewing the CLAUDE.md was the step the student had missed, and fixing it resolved her case.
 2. Connect the n8n MCP so Claude reads real node schemas instead of guessing; without it, invented nodes are expected behaviour.
 3. If the problem started right after a new Opus release, try Sonnet for n8n workflow building and make sure the CLI itself is up to date — the CLI sometimes lags a model release.
 4. Use /clear between unrelated tasks, and at most one deliberate /compact mid-task; the student credited this session hygiene as part of what fixed her sessions.
 
-**Lesson reference**: Lesson #1.5 n8n Skills (skills repo clone + CLAUDE.md reference)
+**Lesson reference**: no current classroom lesson installs the n8n skills. For skills in general, `Claude Code → Phase 1: AI Operating System → 11. Skills` or `Claude Code → Phase 2: Mastering Claude Code → 1.7 Skills`.
 
 **Confidence**: medium — team-verified
 

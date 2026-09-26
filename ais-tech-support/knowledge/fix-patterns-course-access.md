@@ -20,9 +20,9 @@ Provenance labels used below: **lesson-backed** (matches classroom content), **t
 **Root cause**: The AIS 2.0 restructure moved content. YouTube video resources were removed from video descriptions and centralized in the **Nate Herk - Video Database** lesson (a lesson at Community Resources top level, not a section); templates and agent skills were consolidated under Community Resources; some older content moved to the Archived course.
 
 **Fix steps**:
-1. Look in: Claude Code → Phase 1 (1.1-1.8 — n8n MCP setup track) and Phase 2 (agentic workflows, MCP servers, skills). Most numbered Claude Code lessons live in these two phases.
+1. Look in the four Claude Code phases: `Phase 1: AI Operating System`, `Phase 2: Mastering Claude Code` (agentic workflows, MCP servers, skills), `Phase 3: Hosting & Deployment` and `Phase 4: Building Frontends`. Phases 2 to 4 each number their lessons from 1.1, so give the phase along with the number.
 2. Some video templates only live in the Archived classroom (e.g., AI Voice Receptionist Vapi template).
-3. The confirmed template resource: the **"Pre-Flight Setup Checklist" PDF** attached to lesson 1.4 (the lesson text itself references it). A **"Tips & Best Practices" PDF** on `Claude Code → Phase 1 → 1.1 INTRODUCTION` is reported in-thread but not confirmed against the lesson — tell the student to check that lesson's resources section rather than promising it's there. Beyond those, point students at the actual lesson — drive folder URLs floated in the community have not been verifiable against current lesson content.
+3. For a lesson's own files, point students at that lesson's resources section. Drive folder URLs floated in the community have not been verifiable against current lesson content.
 4. **WAT framework**: `Claude Code → Phase 2 → 1.3 The WAT Framework`. WAT = **Workflows, Agents, Tools** — a conceptual framework for agentic automations (not a folder structure). This is the canonical reference now; don't point students at the older YouTube Resources post.
 5. **Permanent fix**: students should keep their personal CLAUDE.md templates and custom skills in their own GitHub gist or private repo so restructures don't kill access.
 - **YouTube video resources** (skills folders, CLAUDE.md files): Classroom > Community Resources > 'Nate Herk - Video Database'.
@@ -84,12 +84,12 @@ Provenance labels used below: **lesson-backed** (matches classroom content), **t
 **Root cause**: Claude Code is non-deterministic: it organizes files and picks architectures on the fly, so the exact commands, folder layout and output will rarely match a recording step for step. Separately, a small static knowledge set legitimately gets inlined into the agent's prompt instead of a vector store. Structural mismatch is not a failure.
 
 **Fix steps**:
-1. Verify the end state, not the file tree: the MCP tools respond when called, .env exists with the n8n instance URL and API key, Claude Code can list and edit your workflows, and the required behaviors pass the lesson's tests.
-2. If the architecture differs (e.g. policies inlined into the agent instead of a separate Knowledge Base Indexer workflow), check it meets the requirements first. Only ask Claude Code to build the vector-store variant if you specifically want to match the lesson.
+1. Verify the end state, not the file tree: the tools respond when called, the credentials are in place, and the build does what the lesson or your own requirements ask. For an n8n MCP build that means .env holds the n8n instance URL and API key and Claude Code can list and edit your workflows.
+2. If the architecture differs (e.g. knowledge inlined into the agent's prompt instead of a separate vector-store workflow), check it meets the requirements first. Only ask Claude Code to build the vector-store variant if you specifically want one.
 3. Rule of thumb given by the team: inline knowledge is fine when the documents are small and static; a vector store starts to matter when they are large or change often.
-4. Quick way to tell which build you got: open the support agent and see whether the policy text sits inside the agent's prompt, or whether there is a vector store node with nothing loaded into it.
+4. Quick way to tell which build you got: open the agent and see whether the knowledge text sits inside its prompt, or whether there is a vector store node with nothing loaded into it.
 
-**Lesson reference**: `Claude Code → Phase 1: Setup & First n8n Workflow → 1.6 Verify All Tools Connected`; lessons 2.2/2.3 (agent + Knowledge Base Indexer) — verify the 2.x titles against the classroom
+**Lesson reference**: the n8n builds this pattern came from are no longer in the classroom. `Claude Code → Phase 1: AI Operating System → 8. Connections` covers testing a new connection before relying on it. For inline knowledge versus a vector store, `Build Your Portfolio → RAG & Vector DBs → What is RAG?` and `What are Vector Databases?` cover the concepts.
 
 **Confidence**: high — team-verified
 

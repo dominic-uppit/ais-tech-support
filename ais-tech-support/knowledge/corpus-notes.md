@@ -76,22 +76,22 @@ making them read a preamble to reach the fix.
 
 | What students say | What it actually is |
 |---|---|
-| "section 1.4" / "module 1.4" / "lesson 1.4" | The n8n MCP Server lesson (`Claude Code → Phase 1 → 1.4 n8n MCP Server`). This is the single most-referenced section number in support. |
+| "section 1.4" / "module 1.4" / "lesson 1.4" | Ambiguous as of 2026-09-30. In the corpus it almost always meant the old n8n MCP Server lesson, the most-referenced section number in support, which is gone from the classroom with its whole section. The classroom now has a 1.4 in Phase 2 (First Agentic Workflow), Phase 3 (Trigger Dev) and Phase 4 (Build My First AI Lead Qualifier App). Route on the rest of the message: with n8n or MCP it is the n8n MCP connection diagnostic, with Trigger.dev it is Phase 3, and on its own ask which phase. Never send anyone back to the old lesson. |
 | "claude md" / "the md file" / "claude.md" / "CLAUDE.md" / "Claude.MD" | The CLAUDE.md context file. Casing is all over the map; the skill should handle any. |
 | "VS code" / "VSC" / "VS Claude Code" / "Claude in VS" | VS Code with the Claude Code extension. |
 | "the extension" vs "the CLI" | Many students don't realize these are separate; they install the extension and assume `claude` works in terminal. |
 | "claude design" / "Claude Cowork" / "Claude Code" / "Claude desktop" / "Claude.ai" | Five distinct products students confuse constantly. |
 | "the WAT framework" / "WAT prompt" / "Nate's template" | **Workflows, Agents, Tools** — a conceptual framework for designing agentic automations. Taught in `Claude Code → Phase 2 → 1.3 The WAT Framework`. (NOT a folder structure — that's a separate community pattern; see taxonomy 7.3.) |
-| "the pre-flight checklist" | A PDF the support team added under lesson 1.4 to cover what the video missed. Students frequently mention it because it solves their problem. |
-| "the health check" | Verification step in n8n MCP setup video. Output rarely matches video output (which trips people up). |
-| "Kodi" | Kodi Zene, the AI Instructor in the lesson 1.4 video. Students reference him constantly. |
+| "the checklist" (in an n8n MCP thread) | A setup checklist PDF that was attached to the old n8n MCP lesson and went away with it. Do not point anyone at it. Its content was the prerequisites (Node.js, an n8n API key, Homebrew on Mac), which the n8n MCP diagnostic lists directly. |
+| "the health check" | The n8n MCP verification step: `/mcp` shows n8n-mcp connected, and asking Claude to list n8n workflows returns them. Output rarely matches any recording, which trips people up. |
+| "Kodi" | Kodi Zene, the AIS+ AI Instructor. In n8n MCP threads, "Kodi said" or "Kodi's video" almost always refers to the old n8n MCP lesson video, which is removed from the classroom on 2026-09-30. Treat it as n8n MCP context and answer from the diagnostic; do not send them back to that video. |
 | "the n8n MCP" | Almost always means czlonkowski's `n8n-mcp` (NOT n8n's native instance-level MCP — even though both share the name). |
 | "the n8n skills" / "skills" | czlonkowski's `n8n-skills` repo. |
 | "n8n cloud" vs "self-host" vs "hostinger" | Three hosting options that students debate constantly. |
 | "the .env" | API keys / secrets file. Many students don't know what it is or where it goes. |
 | "10h10s" / "Agent Zero" / "Build Your Portfolio" | Specific courses. Students use the abbreviations. |
 | "MPC server" / "Cloud Code" | Letter-swap for "MCP server" and misspelling of "Claude Code". Both are extremely common — don't treat them as different products. |
-| "it creates something huge" / "a massive folder" | Claude Code cloned the full czlonkowski/n8n-mcp GitHub source instead of registering the MCP server via the npx package. The clone is not wrong, but it is not what the video shows. |
+| "it creates something huge" / "a massive folder" | Claude Code cloned the full czlonkowski/n8n-mcp GitHub source instead of registering the MCP server via the npx package. The clone is not wrong, and the npx registration route skips it. |
 | "hundreds of pending changes in Source Control" | Git noise from the cloned n8n-mcp repo's own files. Normal, safe to ignore, and NOT the student's work to commit. Reassure before anything else. |
 | "it says connected to localhost — is that ok?" | Yes. The n8n-mcp server process runs on the student's own machine. The separate "n8n connection: configured" line is the one that confirms their n8n instance is reachable. |
 | "my build doesn't match the video" / "mine doesn't look like the video" | Claude Code is non-deterministic. Verify the END STATE (tools respond, `.env` exists, workflows list), never the file tree. This phrase appears constantly and almost never indicates a real fault. |
@@ -125,12 +125,12 @@ making them read a preamble to reach the fix.
 
 ## Common confusions / things students conflate
 
-1. **Two different "n8n MCP" tools**: The official n8n instance-level MCP (built into n8n, exposes workflows TO Claude) vs the community czlonkowski n8n-mcp (gives Claude knowledge to BUILD workflows). Course uses the second; students often follow guides for the first.
+1. **Two different "n8n MCP" tools**: The official n8n instance-level MCP (built into n8n, exposes workflows TO Claude) vs the community czlonkowski n8n-mcp (gives Claude knowledge to BUILD workflows). Students connecting Claude Code to build workflows want the second, and they often follow guides for the first.
 2. **Claude Code CLI vs VS Code extension**: Students install the extension and assume `claude` works in their terminal. They are separate; the extension wraps the CLI.
 3. **Claude Code vs Claude Chat vs Claude.ai vs Claude Cowork vs Claude Desktop vs Claude Design**: Five overlapping products with different runtimes and pricing models. Claude Design now shares the token pool with Claude Code (used to be separate).
 4. **Claude Code subscription vs Claude API**: People expect a personal Max plan to power their production workflows. A personal subscription covers that person's own use, not serving a client's end users, and includes zero API usage — production belongs on API keys from console.anthropic.com, separately billed. ⚠️ Don't assert what the terms legally say or cite an enforcement date; link Anthropic's current [Usage Policy](https://www.anthropic.com/legal/aup) and [Consumer Terms](https://www.anthropic.com/legal/consumer-terms).
-5. **Cloning vs the npx package — and two different meanings of "npx"**: Students clone czlonkowski/n8n-mcp expecting a small install (like the video shows) and get massive node_modules. The course never explicitly tells them the server can be registered via the npx package without cloning at all. The trap is that "npx" names two different things, and a student who has heard "don't use npx" will otherwise reject the team's own recommended fix:
-   - **`npx <package>` run ad-hoc as an install command** is what the lesson cautions about.
+5. **Cloning vs the npx package, and two different meanings of "npx"**: Students clone czlonkowski/n8n-mcp expecting a small install and get massive node_modules, without knowing the server can be registered via the npx package with no clone at all. The trap is that "npx" names two different things, and a student who has heard "don't use npx" (the old n8n MCP lesson carried that warning) will otherwise reject the fix that works best:
+   - **`npx <package>` run ad-hoc as an install command** is what that warning was about.
    - **Registering the MCP server so it launches via the npx package** — `claude mcp add n8n-mcp ... -- npx n8n-mcp` — is what the support team recommends in the 2026-07 threads, and is what avoids the clone entirely.
    Say the distinction out loud rather than "npx is bad" or "npx is fine". Separately, `npm install` is a third, different command: it is required inside a cloned repo and declining it guarantees failure. See the `n8n MCP setup` fix-pattern in `fix-patterns-claude-code.md` and `diagnostic-n8n-workflow-quality.md` — all three should state this the same way.
 6. **MCP scope confusion**: User scope vs project scope. `/mcp` doesn't show MCPs at the wrong scope. Default `claude mcp add` writes user-scope, not what most students want.
@@ -174,7 +174,7 @@ making them read a preamble to reach the fix.
 - **"DM automation via n8n + Meta unofficial API"** → gets accounts banned. Use official Meta Business Partner (ManyChat) or Graph API with a proper app.
 - **"I'll put the MCP credentials in `.env` and Claude Code will pick them up"** → it won't. Claude Code only learns about an MCP server through `claude mcp add` with `-e` flags. This is the single most common "everything looks right but nothing works" in the n8n MCP corpus.
 - **"I'll hand Claude Code the n8n-mcp GitHub URL"** → it reads that as "download and build this project" and clones the whole source. Say instead: "add the n8n-mcp server as an MCP connection using the npx n8n-mcp package, do not clone or download anything."
-- **"I'll decline `npm install` because the lesson warned about `npx`"** → they are different commands. `npm install` is required and declining it guarantees the setup fails. Use plan mode to review what will be installed instead of blanket-refusing.
+- **"I'll decline `npm install` because I was warned about `npx`"** → they are different commands. `npm install` is required and declining it guarantees the setup fails. Use plan mode to review what will be installed instead of blanket-refusing.
 - **"A trailing slash on the URL can't matter"** → a trailing slash (or a doubled/missing `/api/v1`) on `N8N_API_URL` breaks API calls silently. Check this character-by-character before anything else.
 - **"I'll reinstall the extension"** → for a known VS Code extension regression, reinstalling pulls the same bad build. The fix is downgrading to the last working version and disabling auto-update. Same logic applies to reinstalling Homebrew when the real problem is PATH: verify with `brew --version` in a NEW terminal first.
 - **"I'll upgrade Pro → Max to escape this rate-limit error"** → if the error only appears inside VS Code while the terminal CLI works fine, it's the extension's credentials bug and the error survives the upgrade. Also check for a stale `ANTHROPIC_API_KEY` env var, which silently overrides subscription login onto API billing.
@@ -188,15 +188,15 @@ making them read a preamble to reach the fix.
 
 ## Surprising findings that should shape the skill
 
-1. **Lesson 1.4 is THE friction point.** Roughly 15+ threads are about this single lesson. The skill MUST have a strong, sub-pattern-aware response for "I'm stuck on 1.4 / n8n MCP setup". A flowchart approach: ask cloud vs hostinger vs free trial vs corporate proxy first.
+1. **n8n MCP setup is THE setup friction point.** Roughly 15+ threads are about it, almost all from the old lesson 1.4 (n8n MCP Server), which is removed from the classroom on 2026-09-30. No surviving lesson sets it up, so the diagnostic is now the only guide a member gets, and it has to work without a lesson behind it. A flowchart approach: ask cloud vs hostinger vs free trial vs corporate proxy first.
 
 2. **VS Code extension regressions happen every few weeks.** When students report "Claude suddenly broke", the answer is almost always "roll back the VS Code extension to the previous version + disable auto-update". The skill should know this is a recurring pattern, not a one-time bug.
 
 3. **[SOLVED] titles are official practice.** The `START HERE → Getting Help with Automations` lesson explicitly asks students to retitle solved posts with [SOLVED] — that's why so many titles carry it, and it's why searching for [SOLVED] threads is a legitimate first move. When the skill drafts a Support Needed post, remind the student to mark it [SOLVED] once resolved.
 
-4. **Multiple students DON'T finish 1.4 and just skip to section 2.** The support team has publicly endorsed this ("you can bypass n8n if needed"). The skill should know "you don't have to solve 1.4 to keep learning" is a legitimate escape hatch.
+4. **Students who can't get the n8n MCP connected can keep learning without it.** In the corpus, several skipped the old lesson 1.4 and moved on, and the support team endorsed it publicly ("you can bypass n8n if needed"). That escape hatch still holds, since no lesson in Claude Code Phases 1 to 4 uses the n8n MCP. The skill should say "you don't need this connection to keep going with the course", never "skip to section 2" (that section is gone too).
 
-5. **The course shuffled its module structure recently.** Numbered Claude Code lessons (1.1-1.8 Phase 1, then Phase 2/3/4) live in the **Claude Code** course. Community-floating references that say "Claude Code material moved to Build Your Portfolio" are stale — Build Your Portfolio is a separate course with its own intro/Agent Zero/portfolio content. Some assets only exist in the Archived classroom. The skill needs to handle "I can't find lesson X" gracefully — answer is usually "check the Claude Code course first (by phase), then Archived".
+5. **The course shuffled its module structure recently.** Claude Code lessons live in the **Claude Code** course, by phase: Phase 1: AI Operating System (lessons numbered 1 to 15), then Phases 2, 3 and 4 (numbered 1.1, 1.2 and so on, so the same number repeats across phases). Community-floating references that say "Claude Code material moved to Build Your Portfolio" are stale: Build Your Portfolio is a separate course with its own intro/Agent Zero/portfolio content. Some assets only exist in the Archived classroom. The skill needs to handle "I can't find lesson X" gracefully, and the answer is usually "check the Claude Code course first (by phase), then Archived".
 
 6. **Two-product confusion (`czlonkowski/n8n-mcp` vs n8n native instance-level MCP) is poorly explained anywhere.** The cleanest framing in the corpus: **one EXPOSES your workflows to Claude, the other teaches Claude to BUILD workflows**. The skill should lead with this distinction whenever n8n+MCP comes up.
 
